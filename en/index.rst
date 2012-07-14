@@ -10,7 +10,7 @@ About
 
 .. toctree::
 
-    about/index
+    about
     about/license
     about/roadmap
     about/contributors
