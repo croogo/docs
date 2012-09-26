@@ -22,3 +22,10 @@ After uploading your plugin, you need to activate it.
 
 - From your admin panel, go to Extensions > Plugins page
 - Clicking on cross/tick icon will activate or deactivate your plugin
+
+Migrations
+==========
+
+It's possible, when you upload a new plugin, that a link "migrate" appears to the left of link "Deactivate". This link allows to create or update the database for this plugin.
+
+In most cases this operation is automatically applied when activating the plugin, but in some cases the plugin developper may want a manual migrations for some reasons. In this case you need to read the plugin documentation before clicking on the link "Migrate" to know the possibles consequences !
