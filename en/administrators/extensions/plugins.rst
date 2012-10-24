@@ -13,7 +13,11 @@ If you have your plugin in a zip file, follow these instructions:
 Manual upload
 -------------
 
-Place your plugin under /app/plugins/your_plugin_name
+Place your plugin under ``/app/plugins/your_plugin_name``
+
+.. versionchanged:: 1.4
+   The directory will be ``app/Plugin/YourPluginName`` following CakePHP 2.x
+   convention.
 
 How to activate/deactivate?
 ===========================
@@ -26,6 +30,12 @@ After uploading your plugin, you need to activate it.
 Migrations
 ==========
 
-It's possible, when you upload a new plugin, that a link "migrate" appears to the left of link "Deactivate". This link allows to create or update the database for this plugin.
+When you upload a new plugin, a "Migrate" link might appear to the left of
+"Deactivate" link. This link allows to create or update the database for this
+plugin.
 
-In most cases this operation is automatically applied when activating the plugin, but in some cases the plugin developper may want a manual migrations for some reasons. In this case you need to read the plugin documentation before clicking on the link "Migrate" to know the possibles consequences !
+In most cases this operation is automatically applied when activating the
+plugin.  But in some cases, the plugin developer may require manual migrations
+for better control, or additional steps are required before activating the
+migration. In this case you need to read the plugin documentation before
+clicking on the link "Migrate" to know the possibles consequences.
