@@ -5,20 +5,21 @@ The Croogo Documentation, is an openly developed community editable documentatio
 project.  We hope to maintain a high level of quality, validity and accuracy for 
 the documentation.
 
-About
-=====
+:doc:`about`
+===========
 
 .. toctree::
+    :maxdepth: 1
 
-    about
     about/license
     about/roadmap
     about/contributors
 
-Getting started
-===============
+:doc:`getting-started`
+======================
 
 .. toctree::
+    :maxdepth: 1
 
     getting-started/features
     getting-started/demo
@@ -26,3 +27,27 @@ Getting started
     getting-started/requirements
     getting-started/installation
     getting-started/links
+
+:doc:`designers`
+================
+
+.. toctree::
+    :maxdepth: 1
+
+    designers/themes
+
+
+:doc:`developers`
+================
+
+.. toctree::
+    :maxdepth: 1
+
+    developers/working-with-git
+    developers/understanding-cakephp
+    developers/callbacks
+    developers/view-blocks
+    developers/plugins
+    developers/core-plugins
+    developers/shells
+    developers/tips

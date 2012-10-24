@@ -10,3 +10,4 @@ Croogo 1.4 is now using the default CakePHP bootstrap mechanism. However, Croogo
     plugins/bootstrap
     plugins/file-structure
     plugins/json-file
+    plugins/migrations

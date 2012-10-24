@@ -5,6 +5,6 @@ Extensions in Croogo can be of three types. Themes, plugins and locales. They al
 
 .. toctree::
 
-  locales
-  plugins
-  themes
+  extensions/locales
+  extensions/plugins
+  extensions/themes

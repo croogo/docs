@@ -19,8 +19,9 @@ CakePHP's dispatcher calls actions when an incoming request matches a URL to a c
 Code
 ====
 
-Returning to our online bakery example, our RecipesController might contain the view(), share(), and search() actions. The controller would be found in /app/Controller/RecipesController.php.
+Returning to our online bakery example, our RecipesController might contain the view(), share(), and search() actions. The controller would be found in /app/Controller/RecipesController.php::
 
+    <?php
     class RecipesController extends AppController {
     
         public function view($id)     {
