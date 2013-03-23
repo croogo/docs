@@ -13,8 +13,10 @@ If you have your locale in a zip file, follow these instructions:
 Manual upload
 ==============
 
-If the locale is Bengali, place your locale under /app/locale/ben
+If the locale is Bengali, place your locale under /app/Locale/ben
+
 How to activate?
+================
 
 After uploading your locale, you need to activate it.
 

@@ -19,6 +19,7 @@ When you add or edit content types, you will notice a 'Params' field where you c
 
 Supported parameter keys for content types:
 
-- nodes_per_page: Pagination limit for nodes
+- nodes_per_page: Expects integer value greater than 0 for pagination limit of nodes
+- routes: Expects 0 or 1 for beautiful URLs like `/type-alias/node-slug`
 
 You are free to use more keys for parameters and they will be available in a nice formatted way by `ParamsBehavior <http://github.com/croogo/croogo/blob/master/models/behaviors/params.php>`_.

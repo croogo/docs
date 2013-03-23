@@ -13,11 +13,7 @@ If you have your plugin in a zip file, follow these instructions:
 Manual upload
 -------------
 
-Place your plugin under ``/app/plugins/your_plugin_name``
-
-.. versionchanged:: 1.4
-   The directory will be ``app/Plugin/YourPluginName`` following CakePHP 2.x
-   convention.
+Place your plugin under ``/app/Plugin/YourPluginName``
 
 How to activate/deactivate?
 ===========================

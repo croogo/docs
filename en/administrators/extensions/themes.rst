@@ -13,7 +13,7 @@ If you have your theme in a zip file, follow these instructions:
 Manual upload
 -------------
 
-Place your theme under /app/views/themed/your_theme_name
+Place your theme under /app/View/Themed/YourThemeName
 
 How to activate?
 ================

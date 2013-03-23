@@ -6,9 +6,9 @@ Blocks are what you see in the sidebar (‘right’ region in default theme) as 
 Elements
 ========
 
-All blocks are rendered via block.ctp element (found in app/views/elements/block.ctp). You can use your own element too for your blocks by editing 'element' field when adding a block.
+All blocks are rendered via block.ctp element (found in app/Plugin/Blocks/View/Elements/block.ctp). You can use your own element too for your blocks by editing 'element' field when adding a block.
 
-Tip: If it is a plugin element, enter 'plugin_name.element_name'.
+Tip: If it is a plugin element, enter 'PluginName.element_name'.
 
 How to display a THIS and THAT in a block?
 ==========================================
