@@ -4,7 +4,7 @@
 body { line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #444; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
-p { line-height: 25px; }
+p { line-height: 25px; font-weight: 300; }
 
 #header { background: #111; color: #fff; }
 #header a { color: #fff; }
