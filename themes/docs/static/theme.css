@@ -1,10 +1,11 @@
 
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 
-body { line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #444; }
+body { line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 300; color: #444; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
-p { line-height: 25px; font-weight: 300; }
+p { line-height: 25px; }
+tt { font-family: inherit; }
 
 #header { background: #111; color: #fff; }
 #header a { color: #fff; }
@@ -45,6 +46,16 @@ p { line-height: 25px; font-weight: 300; }
 #main .prevnext ul li { }
 #main .prevnext ul li a { display: inline-block; padding: 5px; border: 0px; text-decoration: underline; }
 #main .prevnext ul li a:hover { text-decoration: none; }
+
+#sidebar { padding-top: 10px; }
+#sidebar h3 { display: none; }
+#sidebar ul { list-style: none; margin: 0px; padding: 0px; }
+#sidebar ul li { padding: 6px 0px; }
+#sidebar ul li:last-child { padding-bottom: 0px; }
+#sidebar ul li a { padding: 0px; border: 0px; font-size: 22px; }
+#sidebar ul li a:hover { text-decoration: underline; }
+#sidebar ul li ul li a { font-size: 18px; }
+#sidebar ul li ul li ul li a { font-size: 16px; }
 
 #welcome .section { width: 48%; float: left; padding: 5px; }
 #welcome .section h2 { border-bottom: 1px solid #ccc; }

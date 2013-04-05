@@ -1,22 +1,6 @@
-{% extends "basic/layout.html" %}
+{% extends "default/layout.html" %}
 {% set script_files = [] %}
 {% set css_files = ['_static/reset.css', '_static/960.css', '_static/pygments.css', '_static/theme.css'] %}
-
-{%- macro breadcrumbs() %}
-<div class="breadcrumbs">
-  <ul>    
-    {%- block rootrellink %}
-    <li><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>{{ reldelim1 }}</li>
-    {%- endblock %}
-    
-    {%- for parent in parents %}
-      <li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ reldelim1 }}</li>
-    {%- endfor %}
-    
-    {%- block relbaritems %} {% endblock %}
-  </ul>
-</div>
-{%- endmacro %}
 
 {%- macro prevnext() %}
   <ul>
@@ -52,8 +36,15 @@
 
 <div id="main">
   <div class="container_12">
-    <!--{{ breadcrumbs() }}-->
-    <div class="grid_12">
+    <div class="grid_3">
+      <div id="sidebar">
+        {%- for sidebartemplate in sidebars %}
+        {%- include sidebartemplate %}
+        {%- endfor %}
+      </div>
+    </div>
+
+    <div class="grid_9">
       <div id="content">
         {% block body %} {% endblock %}
       </div>

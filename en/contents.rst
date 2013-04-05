@@ -5,6 +5,12 @@ Contents
    :maxdepth: 3
 
    index
+   about
+   getting-started
+   administrators
+   designers
+   developers
+   translators
 
 .. todolist::
 
