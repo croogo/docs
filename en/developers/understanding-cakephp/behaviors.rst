@@ -10,7 +10,7 @@ As an example, consider a model that gives us access to a database table which s
 Code
 ####
 
-If your Behavior's name is Example, it would be found at `/app/Model/Behavior/ExampleBehavior.php.
+If your Behavior's name is Example, it would be found at `/app/Model/Behavior/ExampleBehavior.php`::
 
     <?php
     class ExampleBehavior extends ModelBehavior {
@@ -44,10 +44,12 @@ If your Behavior's name is Example, it would be found at `/app/Model/Behavior/Ex
 Plugin Behaviors
 ----------------
 
-If it is Example plugin's behavior, it would be found at `/app/Plugin/Example/Model/Behavior/ExampleBehavior.php.
+If it is Example plugin's behavior, it would be found at `/app/Plugin/Example/Model/Behavior/ExampleBehavior.php`.
 
 Using Behaviors in Models
 =========================
+
+::
 
     <?php
     class Recipe extends AppModel {
@@ -60,3 +62,4 @@ Using Behaviors in Models
         );
 
     }
+

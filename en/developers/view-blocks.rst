@@ -5,7 +5,7 @@ CakePHP view blocks have been implemented into Croogo 1.4 for admin_index, admin
 
 Read the CakePHP docs on view blocks: http://book.cakephp.org/2.0/en/views.html#using-view-blocks.
 
-You can override the default Croogo blocks:
+You can override the default Croogo blocks::
 
     <?php
     $this->extend('/Common/admin_index');

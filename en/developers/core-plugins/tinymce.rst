@@ -8,7 +8,7 @@ By default, the editor loads when you add/edit Nodes in your admin panel. To loa
 Configuration
 =============
 
-Configuration for this at /app/Plugin/Tinymce/Config/bootstrap.php looks like this:
+Configuration for this at `/app/Plugin/Tinymce/Config/bootstrap.php` looks like this::
 
     Configure::write('Tinymce.actions', array(
         'Nodes/admin_add' => array(
@@ -28,7 +28,7 @@ Configuration for this at /app/Plugin/Tinymce/Config/bootstrap.php looks like th
         ),
     ));
 
-For example, if you wanted to load the editor in your Products controller's add method for Product model's body field, add this line in the end:
+For example, if you wanted to load the editor in your Products controller's add method for Product model's body field, add this line in the end::
 
     Configure::write('Tinymce.actions', array(
         'Nodes/admin_add' => array(

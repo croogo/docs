@@ -1,7 +1,7 @@
 File structure
 ##############
 
-A plugin is identified by it’s unique alias. If you have your plugin under the directory app/Plugin/Example, then your plugin’s alias is Example.
+A plugin is identified by it’s unique alias. If you have your plugin under the directory `app/Plugin/Example`, then your plugin’s alias is Example.
 
 Structure
 =========

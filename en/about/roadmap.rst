@@ -24,7 +24,8 @@ Roadmap
 - Allow integration of third party auth, eg: twitter oauth, facebook, ldap,
 - Replace Config/settings.yml to Config/settings.json, remove spyc from Vendor **completed (rchavik)**
 
-## 2.0.x
+2.0.x
+-----
 
 - Fully Pluginize: Croogo can become a set of plugins and a minimalist app that simply installs the default plugin set for easy installation.
 - Add namespaces

@@ -10,7 +10,7 @@ A controller is used to manage the logic for a part of your application. Most co
 
 The Recipe model is handled by the RecipesController, the Product model is handled by the ProductsController, and so on.
 
-Your application's controllers are classes that extend the CakePHP AppController class, which in turn extends a core Controller class, which are part of the CakePHP library. The AppController class can be defined in /app/Controller/AppController.php and it should contain methods that are shared between all of your application’s controllers.
+Your application's controllers are classes that extend the CakePHP AppController class, which in turn extends a core Controller class, which are part of the CakePHP library. The AppController class can be defined in `/app/Controller/AppController.php` and it should contain methods that are shared between all of your application’s controllers.
 
 Controllers can include any number of methods which are usually referred to as actions. Actions are controller methods used to display views. An action is a single method of a controller.
 
@@ -42,7 +42,7 @@ Returning to our online bakery example, our RecipesController might contain the 
 Plugin Controllers
 ------------------
 
-If it is Recipes plugin's controller, it would be found at /app/Plugin/Recipe/Controller/RecipesController.php.
+If it is Recipes plugin's controller, it would be found at `/app/Plugin/Recipe/Controller/RecipesController.php`.
 
 How to see it in action?
 ========================

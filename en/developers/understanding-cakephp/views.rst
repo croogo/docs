@@ -11,7 +11,7 @@ Views are the V in MVC. Views are responsible for generating the specific output
 Code
 ####
 
-From previous example of Recipes, we will be placing out view file at /app/View/Recipes/view.ctp.
+From previous example of Recipes, we will be placing out view file at `/app/View/Recipes/view.ctp`::
 
     <div class="recipes view">
         <h2><?php echo $recipe['Recipe']['title']; ?></h2>
@@ -22,4 +22,4 @@ From previous example of Recipes, we will be placing out view file at /app/View/
 Plugin Views
 ------------
 
-If it is Recipes plugin's view, it would be found at /app/Plugin/Recipes/View/view.ctp.
+If it is Recipes plugin's view, it would be found at `/app/Plugin/Recipes/View/view.ctp`.

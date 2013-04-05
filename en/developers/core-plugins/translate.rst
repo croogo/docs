@@ -14,7 +14,7 @@ By default, it takes care of translations for these models:
 Configuration
 =============
 
-Configuration for this at /app/Plugin/Translate/Config/bootstrap.php looks like this:
+Configuration for this at `/app/Plugin/Translate/Config/bootstrap.php` looks like this::
 
     Configure::write('Translate.models', array(
         'Node' => array(
@@ -32,7 +32,7 @@ Configuration for this at /app/Plugin/Translate/Config/bootstrap.php looks like 
         ),
     ));
 
-Now if you want your contact forms to be translated too, just add Contact model's name to the plugin's bootstrap like this:
+Now if you want your contact forms to be translated too, just add Contact model's name to the plugin's bootstrap like this::
 
     Configure::write('Translate.models', array(
         'Node' => array(

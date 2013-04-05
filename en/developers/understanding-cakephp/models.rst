@@ -11,7 +11,7 @@ Models represent data and are used in CakePHP applications for data access. A mo
 A model can be associated with other models. For example, a Recipe may be associated with the Author of the recipe as well as the Ingredient in the recipe.
 Code
 
-If you have a table named 'recipes' (with columns id, title, body), the model name would be Recipe and found at /app/Model/Recipe.php.
+If you have a table named 'recipes' (with columns id, title, body), the model name would be Recipe and found at `/app/Model/Recipe.php`::
 
     <?php
     class Recipe extends AppModel {
@@ -21,10 +21,12 @@ If you have a table named 'recipes' (with columns id, title, body), the model na
 Plugin Models
 -------------
 
-If it is Recipes plugin's model, it would be found at /app/Plugin/Recipes/Model/Recipe.php.
+If it is Recipes plugin's model, it would be found at `/app/Plugin/Recipes/Model/Recipe.php`.
 
 Using Models in Controllers
 ===========================
+
+::
 
     <?php
     class RecipesController extends AppController {

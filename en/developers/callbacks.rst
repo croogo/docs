@@ -14,6 +14,8 @@ The following callbacks are supported for components by CakePHP.
 Code
 ----
 
+::
+
     <?php
     class ExampleComponent extends Component {
 
@@ -70,6 +72,8 @@ Extra callbacks by Croogo for better integration
 
 Code
 ----
+
+::
 
     <?php
     class ExampleHelper extends AppHelper {

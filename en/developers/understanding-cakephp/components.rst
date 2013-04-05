@@ -11,7 +11,7 @@ Components are packages of logic that are shared between controllers. If you fin
 Code
 ====
 
-Assuming you want to create an Example component, it would be found at /app/Controller/Component/ExampleComponent.php.
+Assuming you want to create an Example component, it would be found at `/app/Controller/Component/ExampleComponent.php`::
 
     <?php
     class ExampleComponent extends Component {
@@ -25,10 +25,12 @@ Assuming you want to create an Example component, it would be found at /app/Cont
 Plugin components
 -----------------
 
-If it Example plugin's component, it would be found at /app/Plugin/Example/Controller/Component/ExampleComponent.php.
+If it Example plugin's component, it would be found at `/app/Plugin/Example/Controller/Component/ExampleComponent.php`.
 
 Using Components in Controllers
 ===============================
+
+::
 
     <?php
     class RecipesController extends AppController {

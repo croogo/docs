@@ -11,7 +11,7 @@ Helpers are the component-like classes for the presentation layer of your applic
 Code
 ====
 
-Let's say we named our helper Example, and it would be found at /app/View/Helper/ExampleHelper.php.
+Let's say we named our helper Example, and it would be found at `/app/View/Helper/ExampleHelper.php`::
 
     <?php
     class ExampleHelper extends AppHelper {
@@ -25,12 +25,12 @@ Let's say we named our helper Example, and it would be found at /app/View/Helper
 Plugin helpers
 --------------
 
-If it is Example plugin's helper, it would be found at /app/Plugin/Example/View/Helper/ExampleHelper.php.
+If it is Example plugin's helper, it would be found at `/app/Plugin/Example/View/Helper/ExampleHelper.php`.
 
 Using Helpers in Views
 ======================
 
-Before using helpers in views, we need to let our Controller know to get it loaded.
+Before using helpers in views, we need to let our Controller know to get it loaded::
 
     <?php
     class RecipesController extends AppController {
@@ -50,7 +50,7 @@ Before using helpers in views, we need to let our Controller know to get it load
 
     }
 
-Now we can use the helper from our view at /app/View/Recipes/view.ctp:
+Now we can use the helper from our view at /app/View/Recipes/view.ctp::
 
     <div class="recipes view">
         <h2><?php echo $recipe['Recipe']['title']; ?></h2>
