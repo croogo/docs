@@ -1,0 +1,52 @@
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+body { line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #444; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+p { line-height: 25px; }
+
+#header { background: #111; color: #fff; }
+#header a { color: #fff; }
+#header a.logo { display: inline-block; height: 38px; width: 150px; padding: 0px; background: url(./img/croogo.png) left bottom no-repeat; background-size: 76%; }
+
+#nav { padding: 0px; margin: 0px; list-style: none; float: right; }
+#nav li { float: left; }
+#nav li a { padding: 10px 5px 13px 5px; display: inline-block; font-weight: 400; font-size: 14px; }
+#nav li a:hover { background: #555; text-decoration: none; }
+
+#main { padding: 10px 0px 10px 0px; font-size: 16px; }
+#main a.headerlink { color: #444; text-decoration: none; padding: 0px 5px; }
+#main a.headerlink:hover { text-decoration: none; }
+#main p { margin: 10px 0px; }
+#main h1 { border-bottom: 1px solid #ccc; padding: 20px 0px; font-size: 42px; font-weight: 900; margin-bottom: 20px; color: #333; }
+#main h1 a.headerlink { font-size: 36px; }
+#main h2 { margin: 10px 0px; padding: 15px 0px; font-size: 26px; font-weight: 600; border-bottom: 1px dotted #ccc; color: #333; }
+#main h2 a { border: 0px; }
+#main h2 em { font-style: normal; }
+#main h3 { font-weight: bold; font-size: 18px; padding: 5px 0px; margin-top: 15px; color: #333; }
+#main a { color: #444; border-bottom: 1px dotted #444; }
+#main a:hover { text-decoration: none; border-bottom: none; }
+#main ul { list-style: disc; margin: 10px 30px; }
+#main ul li { padding: 3px 0px; }
+#main ul li a { }
+#main ul li ul { margin: 2px 20px; }
+#main .toctree-wrapper ul li ul { display: none; }
+#main .highlight { background: #f8f8f8; border: 1px solid #e5e5e5; padding: 5px; overflow-x: scroll; }
+#main cite { background: #f8f8f8; border: 1px solid #e5e5e5; font-style: normal; padding: 1px 3px; }
+#main .prevnext { text-align: right; }
+#main .prevnext ul { list-style: none; margin: 0px; padding: 0px; }
+#main .prevnext ul li:first-child,
+#main .prevnext ul li:nth-child(3) { display: none; }
+#main .prevnext ul li { }
+#main .prevnext ul li a { display: inline-block; padding: 5px; border: 0px; text-decoration: underline; }
+#main .prevnext ul li a:hover { text-decoration: none; }
+
+#welcome .section { width: 48%; float: left; padding: 5px; }
+#welcome .section h2 { border-bottom: 1px solid #ccc; }
+
+#footer { background: #333; color: #fff; font-size: 14px; font-weight: 400; padding: 5px 0px; }
+#footer a { color: #fff; }
+#footer #links a { display: inline-block; margin-right: 10px; }
+#footer #connect { text-align: right; }
+#footer #connect a { display: inline-block; margin-left: 10px; }

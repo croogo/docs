@@ -1,0 +1,99 @@
+{% extends "basic/layout.html" %}
+{% set script_files = [] %}
+{% set css_files = ['_static/reset.css', '_static/960.css', '_static/pygments.css', '_static/theme.css'] %}
+
+{%- macro breadcrumbs() %}
+<div class="breadcrumbs">
+  <ul>    
+    {%- block rootrellink %}
+    <li><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>{{ reldelim1 }}</li>
+    {%- endblock %}
+    
+    {%- for parent in parents %}
+      <li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ reldelim1 }}</li>
+    {%- endfor %}
+    
+    {%- block relbaritems %} {% endblock %}
+  </ul>
+</div>
+{%- endmacro %}
+
+{%- macro prevnext() %}
+  <ul>
+  {%- for rellink in rellinks %}
+    <li>
+      <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}" {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
+    </li>
+  {%- endfor %}
+  </ul>
+{%- endmacro %}
+
+{%- block content %}
+<div id="header">
+  <div class="container_12">
+    <div class="grid_6">
+      <a class="logo" href="http://croogo.org"> </a>
+    </div>
+
+    <div class="grid_6">
+      <ul id="nav">
+        <li><a href="http://docs.croogo.org">Documentation</a></li>
+        <li><a href="http://blog.croogo.org">Blog</a></li>
+        <li><a href="http://github.com/croogo/croogo">Source</a></li>
+        <li><a href="http://croogo.lighthouseapp.com/">Issues</a></li>
+        <li><a href="https://groups.google.com/forum/?fromgroups#!forum/croogo">Discuss</a></li>
+        <li><a href="http://downloads.croogo.org">Download</a></li>
+      </ul>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div id="main">
+  <div class="container_12">
+    <!--{{ breadcrumbs() }}-->
+    <div class="grid_12">
+      <div id="content">
+        {% block body %} {% endblock %}
+      </div>
+
+      <div class="prevnext">
+        {{ prevnext() }}
+      </div>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+</div>
+{%- endblock %}
+
+
+{%- block relbar1 %}{% endblock %}
+{%- block relbar2 %}{% endblock %}
+
+
+{%- block footer %}
+<div id="footer">
+  <div class="container_12">
+    <div class="grid_6">
+      <div id="links">
+        <a href="https://github.com/croogo?tab=members">Team</a>
+        <a href="https://github.com/croogo/croogo/blob/master/LICENSE.txt">License</a>
+      </div>
+    </div>
+
+    <div class="grid_6">
+      <div id="connect">
+        <a href="http://twitter.com/croogo">Twitter</a>
+        <a href="https://plus.google.com/u/0/communities/103533171506392970953">Google+</a>
+        <a href="https://groups.google.com/forum/?fromgroups#!forum/croogo">Groups</a>
+        <a href="http://github.com/croogo">GitHub</a>
+        <a href="http://webchat.freenode.net/?channel=croogo">IRC</a>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+</div>
+{% endblock %}
