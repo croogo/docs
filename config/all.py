@@ -36,10 +36,10 @@ copyright = u'2012'
 # built documents.
 #
 # The short X.Y version.
-version = '1.4'
+version = '1.5'
 
 # The full version, including alpha/beta/rc tags.
-release = '1.4.2'
+release = '1.5.1'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -78,7 +78,7 @@ highlight_language = 'php'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'croogo'
+html_theme = 'docs'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -94,7 +94,7 @@ html_theme_path = ['../themes']
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
-html_short_title = u'Croogo Docs 1.4'
+html_short_title = u'Croogo Docs 1.5'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -240,7 +240,7 @@ man_pages = [
 epub_title = u'Croogo Docs'
 epub_author = u'Croogo.'
 epub_publisher = u'Croogo.'
-epub_copyright = u'2012, Croogo.'
+epub_copyright = u'2013, Croogo.'
 
 epub_theme = 'croogo-epub'
 
