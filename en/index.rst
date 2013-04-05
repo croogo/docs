@@ -28,13 +28,20 @@ the documentation.
     getting-started/installation
     getting-started/links
 
-:doc:`designers`
+:doc:`administrators`
 ================
 
 .. toctree::
     :maxdepth: 1
 
-    designers/themes
+    administrators/content
+    administrators/menus
+    administrators/blocks
+    administrators/extensions
+    administrators/media
+    administrators/contacts
+    administrators/users
+    administrators/settings
 
 
 :doc:`developers`
@@ -51,3 +58,11 @@ the documentation.
     developers/core-plugins
     developers/shells
     developers/tips
+
+:doc:`designers`
+================
+
+.. toctree::
+    :maxdepth: 1
+
+    designers/themes
