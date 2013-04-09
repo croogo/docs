@@ -1,5 +1,9 @@
-TineMCE
+TinyMCE
 #######
+
+.. versionchanged:: 1.5.1
+    TinyMCE is not included out of the box in 1.5.1.  Ckeditor has been
+    is now is the default RTE.
 
 TinyMCE is a popular WYSIWYG editor by Moxiecode Systems. It is packaged and shipped as a plugin with Croogo.
 
