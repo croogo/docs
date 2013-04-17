@@ -32,7 +32,7 @@ Roadmap
 -----
 
 - Plugin download/finder via shell (the CPM - package management idea)
-- Default theme: use Twitter Bootstrap
+- :strike:`Default theme: use Twitter Bootstrap` (default theme will not be changed)
 - :strike:`Admin theme: use Twitter Bootstrap here too?` **(aymeric and real34 - occitech)**
 - Node Preview indicator, display published nodes that has preview flag set for admins.
 - :strike:`Defaults to InnoDb storage engine for mysql`
