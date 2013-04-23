@@ -37,7 +37,7 @@ tt { font-family: inherit; }
 #main ul li ul { margin: 2px 20px; }
 #main .toctree-wrapper { background: #f8f8f8; border: 1px solid #e5e5e5; }
 #main .toctree-wrapper ul li ul { display: none; }
-#main .highlight { background: #f8f8f8; border: 1px solid #e5e5e5; padding: 5px; overflow-x: scroll; }
+#main .highlight { background: #f8f8f8; border: 1px solid #e5e5e5; padding: 5px; overflow-x: auto; }
 #main cite { background: #f8f8f8; border: 1px solid #e5e5e5; font-style: normal; padding: 1px 3px; }
 #main .prevnext { text-align: right; }
 #main .prevnext ul { list-style: none; margin: 0px; padding: 0px; }
