@@ -32,3 +32,31 @@ You can activate/deactivate plugins and themes from the console. To activate the
 To deactivate::
 
     $ ./Console/cake ext deactivate plugin Megamenu
+
+Settings Shell
+==============
+
+The Settings plugin provides a few utility command to manipulate configuration values:
+
+- Reading a configuration::
+
+    $ ./Console/cake settings.settings read Site.title
+
+- Writing a configuration value::
+
+    $ ./Console/cake settings.settings write Site.title "My Awesome Site"
+
+- Deleting a configuration value::
+
+    $ ./Console/cake settings.settings delete Custom.settingValue
+
+- Updating version information after an upgrade::
+
+    $ ./Console/cake settings.settings upgrade_version_info
+
+Users Shell
+===========
+
+You can reset a user's password from the shell::
+
+    $ ./Console/cake users.users reset admin password
