@@ -1,5 +1,5 @@
 Acerca de Croogo
-############
+################
 
 Croogo es un sistema de gesion de contenidos gratuito y de codigo abierto para PHP, liberado con la licencia MIT. Es construido sobre el frameworks de CakePHP.
 

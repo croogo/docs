@@ -1,5 +1,5 @@
 Empezando con Croogo
-===============
+====================
 
 .. toctree::
 	:maxdepth: 1

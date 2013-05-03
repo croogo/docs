@@ -1,5 +1,6 @@
 Administradores
-==============
+===============
+
 .. toctree::
 
   administrators/content
