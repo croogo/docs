@@ -44,10 +44,10 @@ Esto se hace con una llamada simple al metodo del LayourHelper `$this->Layout->m
         <?php echo $this->Layout->meta(); ?>
     </head>
 
-Feeds
------
+Fuentes web
+-----------
 
-`$this->Layout->feed()` will output your RSS feed link for your promoted content.
+`$this->Layout->feed()` dara como salida una fuente RSS a tu contenido promovido
 
 ::
 
@@ -62,7 +62,7 @@ Feeds
 CSS
 ---
 
-If you have your css file placed under `/app/View/Themed/MyTheme/webroot/css/theme.css`::
+Si tienes tus archivos CSS ubicados en `/app/View/Themed/MyTheme/webroot/css/theme.css`::
 
     <head>
         <title><?php echo $title_for_layout . ' | ' . Configure::read('Site.title'); ?></title>
@@ -76,7 +76,7 @@ If you have your css file placed under `/app/View/Themed/MyTheme/webroot/css/the
 Javascript
 ----------
 
-Croogo has a Croogo object in javascript that stores information like the application's base path, etc. This is useful for other javascript related tasks. It can done by calling a single method `$this->Layout->js()`::
+Croogo tiene un objeto Croogo en javascript que almacena informacion como la ruta base de la aplicacion, etc. Esto es util cuando tienes tareas relacionadas con Javascript para completar. Se puede lograr llamando al metodo `$this->Layout->js()`::
 
     <head>
         <title><?php echo $title_for_layout . ' | ' . Configure::read('Site.title'); ?></title>
@@ -88,7 +88,7 @@ Croogo has a Croogo object in javascript that stores information like the applic
         ?>
     </head>
 
-CakePHP allows you to load javascript from your views so they go directly inside HEAD. For this, you need to echo out the variable `$scripts_for_layout`.
+CakePHP permite cargar javascript desde tus vistas para que puedan ir directamente a HEAD. Para hacer esto necesitaras hacer echo a la variable `$scripts_for_layout`.
 
 ::
 
@@ -103,15 +103,15 @@ CakePHP allows you to load javascript from your views so they go directly inside
         ?>
     </head>
 
-The BODY
-========
+La etiqueta BODY
+================
 
-This is where you output the actual content that is visible in the browser.
+Aqui es donde vas a dar salida al contenido que es visible para el navegador.
 
-Content
--------
+Contenido
+---------
 
-The output generated from your view is available in the variable `$content_for_layout`:
+La salida generada por tus vistas esta disponible en la varible `$content_for_layout`:
 
 ::
 
@@ -124,7 +124,7 @@ The output generated from your view is available in the variable `$content_for_l
 Menu
 ----
 
-If you want to show a menu with alias main, it is as simple as `$this->Layout->menu('main')`. This will generate a nested unordered list of your main menu:
+Si quieres mostrar un menu con el alias 'main', es tan simple como llamar a `$this->Layout->menu('main')`. Esto generara una lista anidada no ordenada de tu menu main:
 
 ::
 
@@ -139,10 +139,10 @@ If you want to show a menu with alias main, it is as simple as `$this->Layout->m
     </body>
 
 
-Blocks
-------
+Bloques
+-------
 
-If you want to show the blocks that belong to right region, just add `$this->Layout->blocks('right')`:
+Si quieres mostrar los bloques que le pertenecen a la region 'derecha', solo agrega `$this->Layout->blocks('derecha')`:
 
 ::
 
@@ -156,11 +156,12 @@ If you want to show the blocks that belong to right region, just add `$this->Lay
         </div>
 
         <div id="sidebar">
-            <?php echo $this->Layout->blocks('right'); ?>
+            <?php echo $this->Layout->blocks('derecha'); ?>
         </div>
     </body>
 
-Final code of default.ctp
+
+Codigo final de default.ctp
 =========================
 
 ::
@@ -188,7 +189,7 @@ Final code of default.ctp
             </div>
 
             <div id="sidebar">
-                <?php echo $this->Layout->blocks('right'); ?>
+                <?php echo $this->Layout->blocks('derecha'); ?>
             </div>
         </body>
     </html>
