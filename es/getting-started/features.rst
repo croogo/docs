@@ -1,0 +1,37 @@
+Caracteristicas
+###############
+
+- Contenido
+  - Tipos de contenido: puedes crear tus propios tipos de contenido
+    - Blog
+    - Node
+    - Page
+  - Taxonomias: Categorizacion de tu contenido
+  - Editor visual
+    - Adjuntos (para imagen y carga de archivos)
+  - Comentarios
+    - Comentarios anidados
+    - Notificaciones por email
+    - Moderacion
+    - Proteccion anti SPAM (requiere Llave API de Akismet)
+    - Captcha (require llave API de Recaptcha)
+  - Sindicacion: Fuentes web RSS para:
+    - Tipos de contenido individuales
+    - Todos los articulos promovidos
+    - Comentarios
+  - SEO
+    - URLs amigables para buscadores
+    - Control completo de las etiquetas meta
+  - Campos personalizados
+- Administrador de menus
+- Bloques
+- Formularios de contacto
+  - Notificacion por email
+  - Archivo d emensajes
+  - Proteccion antispam (requiere Llave API de Akismet)
+  - Captcha (requiere Llave API de Recaptcha)
+- Administrador de archivos
+- Administrador de usuarios
+  - Administrador ACL (Permisos)
+- Plantillas
+- Instalacion web
