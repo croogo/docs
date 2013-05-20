@@ -1,7 +1,7 @@
 Theme functions
 ###############
 
-All theme specific functions (if you need any) go to CustomHelper. If your theme alias is MyTheme, your CustomHelper should be placed in `app/View/Themed/MyTheme/Helpers/CustomHelper.php`.
+All theme specific functions (if you need any) go to CustomHelper. If your theme alias is MyTheme, your CustomHelper should be placed in `app/View/Themed/MyTheme/Helper/CustomHelper.php`.
 
 ::
 
