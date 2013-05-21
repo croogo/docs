@@ -1,9 +1,9 @@
-Trabajando con Git
+﻿Trabajando con Git
 ##################
 
 El repositorio git de Croogo esta hospedado en GitHub. El repositorio contiene el contenido del directorio `app` solamente, asi que necesitaras descargar CakePHP antes de clonarlo.
 
-Una vez que descargues y extraigas el archivo de CakePHP, navega a la carpeta `app` y vac�ala. Ahora corre lo siguiente ::
+Una vez que descargues y extraigas el archivo de CakePHP, navega a la carpeta `app` y vacíala. Ahora corre lo siguiente ::
 
     $ cd app
     $ git init

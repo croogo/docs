@@ -1,4 +1,4 @@
-Auxiliares (helpers)
+﻿Auxiliares (helpers)
 ####################
 
 Lee la documentacion de CakePHP de los auxiliar (helper):

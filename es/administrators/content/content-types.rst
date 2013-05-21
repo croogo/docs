@@ -1,4 +1,4 @@
-Tipos de contenido
+﻿Tipos de contenido
 =============
 
 Por defecto, hay 3 tipos de contenido

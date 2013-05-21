@@ -1,4 +1,4 @@
-Bloques de Vista
+﻿Bloques de Vista
 ################
 
 Los bloques de vista han sido implementados en Croogo 1.4 para admin_index, admin_add, y admin_edit.
@@ -28,7 +28,7 @@ admin_index
 Los siguientes bloques estan disponibles:
 
 - title: Sustituye el titulo.
-- tabs: Sustituye los vinculos de la etiqueta li de pesta�as.
+- tabs: Sustituye los vinculos de la etiqueta li de pestañas.
 - paging: Sustituye los numeros y el contador de paginacion.
 
 admin_edit / admin_add

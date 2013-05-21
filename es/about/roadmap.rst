@@ -1,4 +1,4 @@
-.. role:: strike
+﻿.. role:: strike
    :class: strike
 
 Camino seguido

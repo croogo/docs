@@ -1,4 +1,4 @@
-Traduccion
+﻿Traduccion
 ##########
 
 El plugin de traduccion es uno de los plugins del nucleo que se envian con Croogo. Si tu sitio requiere el contenido en multiples lenguajes (i18n), solo activalo y empieza a traducir desde tu panel de administracion.
@@ -14,7 +14,7 @@ Por defecto, puede traducir contenido para los siguientes modelos:
 Configuracion
 =============
 
-La configuracion para esto est� en `/app/Plugin/Translate/Config/bootstrap.php` y es la siguiente ::
+La configuracion para esto está en `/app/Plugin/Translate/Config/bootstrap.php` y es la siguiente ::
 
     Configure::write('Translate.models', array(
         'Node' => array(

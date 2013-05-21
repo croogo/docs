@@ -1,4 +1,4 @@
-Configuracion regional (Locale)
+﻿Configuracion regional (Locale)
 ###############################
 
 Como cargar?

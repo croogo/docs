@@ -1,4 +1,4 @@
-Wysiwyg
+﻿Wysiwyg
 #######
 
 Wysiwyg es un wrapper plugin generico para permitir la interfaz y configurado de Editores de Texto Rico.

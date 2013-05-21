@@ -1,4 +1,4 @@
-Distribucion Basica
+﻿Distribucion Basica
 ###################
 
 Llamaremos a nuestra plantilla "MiTema", asi que pondremos nuestra distribucion basica en:

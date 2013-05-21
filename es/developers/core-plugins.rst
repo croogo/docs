@@ -1,4 +1,4 @@
-Plugins del nucleo
+﻿Plugins del nucleo
 ##################
 
 .. toctree::

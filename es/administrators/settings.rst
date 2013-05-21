@@ -1,4 +1,4 @@
-Configuraciones
+﻿Configuraciones
 ###############
 
 Es aqui donde se manejaran las configuraciones globales de tu sitio

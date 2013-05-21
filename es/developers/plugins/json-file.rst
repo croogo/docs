@@ -1,4 +1,4 @@
-Archivo JSON
+﻿Archivo JSON
 ############
 
 Un archivo plugin.json es requerido para cada plugin en Croogo que requiera ser activado desde el panel de administracion.Almacena Informacion util como los detalles de contacto del desarrollador, asi como informacion de sus dependencias.

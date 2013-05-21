@@ -1,4 +1,4 @@
-Permisos
+﻿Permisos
 ########
 
 Croogo usa el sistema ACL de CakePHP para administrar los permisos de los usuarios. Para ser honestos puede ser un poco complicado explicar ACL para los principiantes. Pero Croogo se encarga de quitar el sufrimiento de esto al proveer una interfaz simple y utilizable para administrar los permisos.

@@ -1,4 +1,4 @@
-Funciones de plantillas
+﻿Funciones de plantillas
 #######################
 
 Todas las funciones especificas de los temas (en case de ser necesarias) van en el CustomHelper. Si el alias de tu plantilla es MiTema, el CustomHelper debera estar ubicado en  `app/View/Themed/MiTema/Helper/CustomHelper.php`.

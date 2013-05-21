@@ -1,4 +1,4 @@
-Archivo JSON
+﻿Archivo JSON
 #########
 
 Un archivo theme.json es requerido para cada tema en Croogo. Este es requerido porque ahi se almacena informacion util como los menus y regiones que usa. De esta manera le permite a Croogo hacer peticiones a la base de datos y estar disponible sin romper el esquema MVC.

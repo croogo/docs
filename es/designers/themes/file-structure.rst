@@ -1,4 +1,4 @@
-Estructura de archivos
+﻿Estructura de archivos
 ######################
 
 Cada plantilla esta identificada por su alias unico. Si tienes una plantilla en el directorio `app/View/Themed/MiTema`, Entonces el alias de tu plantilla sera MiTema.

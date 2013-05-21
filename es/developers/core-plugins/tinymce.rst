@@ -1,4 +1,4 @@
-TinyMCE
+﻿TinyMCE
 #######
 
 .. versionchanged:: 1.5.1
