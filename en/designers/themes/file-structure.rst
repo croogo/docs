@@ -12,7 +12,7 @@ For example, you have a theme with alias MyTheme. All your files should be place
 
 - app/View/Themed/MyTheme/
   - Elements/
-  - Helpers/
+  - Helper/
     - custom.php
   - Layouts/
     - default.ctp

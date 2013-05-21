@@ -12,7 +12,7 @@ Por ejemplo, si tienes una plantilla con el alias MiTema. Todos tus archivos deb
 
 - app/View/Themed/MiTema/
   - Elements/
-  - Helpers/
+  - Helper/
     - custom.php
   - Layouts/
     - default.ctp
