@@ -1,4 +1,4 @@
-Bootstrap
+﻿Bootstrap
 #########
 
 Los plugins tienen su propio bootstrat. Si tienes un plugin llamado Example, entonces tendra su archivo en `app/Plugin/Example/Config/bootstrap.php`. Este archivo es requerido por todos los plugins y es cargado (siempre que este activo) cada vez que la aplicacion arranca.

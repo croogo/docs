@@ -1,4 +1,4 @@
-Requisitos
+﻿Requisitos
 ##########
 
 - Servidor HTTP: Apache con mod_rewrite preferido.

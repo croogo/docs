@@ -1,4 +1,4 @@
-Dise�adores
+﻿Diseñadores
 ###########
 
 .. toctree::

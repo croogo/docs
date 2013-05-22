@@ -1,4 +1,4 @@
-Estructura de archivos
+﻿Estructura de archivos
 ######################
 
 Por ejemplo, si quieres traducir Croogo al Bengali (que el codigo ISO 639-2 de ese lenguaje es ben), entonces la estructura de archivos seria:

@@ -1,4 +1,4 @@
-Plugins
+﻿Plugins
 #######
 
 Desde book.cakephp.org: CakePHP permite definir una combinacion de controladores, modelos, y vistas y publicarlos como una apligacion plugin empaquetada que otros pueden usar en sus aplicaciones de CakePHP.

@@ -1,4 +1,4 @@
-Componentes
+﻿Componentes
 ###########
 
 Lee la documentacion de CakePHP de componentes:

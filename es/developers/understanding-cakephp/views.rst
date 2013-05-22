@@ -1,4 +1,4 @@
-Vistas
+﻿Vistas
 ######
 
 Lee la documentacion de CakePHP para Vistas:

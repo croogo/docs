@@ -1,4 +1,4 @@
-Roles
+﻿Roles
 #####
 
 Todos los usuarios pertencen a un rol particular. Croogo distingue a sus usuarios en tres diferentes roles por defecto:

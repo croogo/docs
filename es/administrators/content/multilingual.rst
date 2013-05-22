@@ -1,4 +1,4 @@
-Multilenguaje
+﻿Multilenguaje
 ############
 
 Croogo viene con un plugin de Traduccion. Al activarlo desde la pagina de Extensiones > Plugins te permitira que traduzcas tu contenido en otros lenguajes.
@@ -14,4 +14,4 @@ Antes de iniciar las traducciones de tu contenido, necesitaras declarar en Croog
 
 Ver contenido desde la parte publica de tu sitio
 ================================================
-Visita http://your-site.com/spa desde tu navegador donde spa es el Locale del lenguaje Espa�ol
+Visita http://your-site.com/spa desde tu navegador donde spa es el Locale del lenguaje Español

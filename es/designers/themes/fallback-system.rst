@@ -1,4 +1,4 @@
-Sistema de repliegue
+﻿Sistema de repliegue
 ####################
 
 Es completamente aceptable si no quieres crear todas y cada una de las vistas de tu plantilla. Por ejemplo, si `app/View/Themed/MyTheme/Users/add.ctp` no se encuentra, CakePHP intentara localizar  `app/View/Users/add.ctp`.

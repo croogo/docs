@@ -1,4 +1,4 @@
-Entendiendo CakePHP
+﻿Entendiendo CakePHP
 ###################
 
 Por favor visite http://book.cakephp.org para la documentacion oficial.

@@ -1,4 +1,4 @@
-Consolas
+﻿Consolas
 ########
 
 Croogo ahora tiene la habilidad de instalar y activar extensiones desde la linea de comandos. Para acceder a las consolas cd en tu carpeta `app` y corre los comandos usando: `./Console/cake [shell]`.

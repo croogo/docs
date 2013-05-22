@@ -1,4 +1,4 @@
-Comportamientos
+﻿Comportamientos
 ###############
 
 Lee la documentacion de CakePHP de Comportamientos (Behaviors) en: http://book.cakephp.org/2.0/en/models/behaviors.html.

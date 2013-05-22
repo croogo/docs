@@ -1,4 +1,4 @@
-Caracteristicas
+﻿Caracteristicas
 ###############
 
 - Contenido
