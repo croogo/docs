@@ -65,5 +65,6 @@ tt { font-family: inherit; }
 #footer #links a { display: inline-block; margin-right: 10px; }
 #footer #connect { text-align: right; }
 #footer #connect a { display: inline-block; margin-left: 10px; }
+#footer .separator { margin-left: 10px; }
 
 .strike { text-decoration: line-through; }
