@@ -1,0 +1,37 @@
+Fonctionnalités
+###############
+
+- Contenu
+  - Types de Contenu: Vous pouvez créer votre propre type de contenu
+    - Blog
+    - Node
+    - Page
+  - Taxonomy: Catégorisation de votre contenu
+  - WYSIWYG Editor
+    - Attachments (pour uploads d'images et de fichiers)
+  - Commentaires
+    - Commentaires liés
+    - Notification par Email
+    - Modération
+    - Protection Spam (nécessite la clé Akismet API)
+    - Captcha (nécessite la clé Recaptcha API)
+  - Syndication: RSS feeds pour
+    - des types de contenu individuel
+    - Tous les éléménts promus
+    - Commentaires
+  - SEO
+    - Moteur de Recherche friendly URLs
+    - Contrôle complet des balises meta
+  - Champs personnalisés
+- Manager de Menu
+- Blocks
+- Formulaires de Contact
+  - notification par Email
+  - Archive des messages
+  - Protection Spam (nécessite la clé Akismet API)
+  - Captcha (nécessite la clé Recaptcha API)
+- Manager de fichiers
+- Utilisateurs
+  - Manager ACL (Permissions)
+- Thèmes
+- Administration par le Web

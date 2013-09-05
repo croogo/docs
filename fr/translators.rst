@@ -1,0 +1,6 @@
+Traducteurs
+###########
+
+.. toctree::
+
+    translators/locales
