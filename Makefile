@@ -7,7 +7,7 @@ PYTHON = python
 .PHONY: all clean html latexpdf epub htmlhelp
 
 # Languages that can be built.
-LANGS = en pt es
+LANGS = en pt es fr
 
 # Dependencies to perform before running other builds.
 SPHINX_DEPENDENCIES = $(foreach lang, $(LANGS), $(lang)/Makefile)
