@@ -1,4 +1,5 @@
 Packaging
 #########
 
-Create a zip archive of the theme directory `app/View/Themed/MyTheme`. It can then later be uploaded from admin panel.
+Créer une archive zip du répertoire de thème `app/View/Themed/MyTheme`. Il
+pourra ensuite, plus tard, être uploadé à partir d'un panneau admin.

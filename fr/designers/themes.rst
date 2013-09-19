@@ -1,7 +1,9 @@
-Themes
+Thèmes
 ######
 
-Themes allow you to design your Croogo powered website the way you want. Since it uses MVC, you have total control over it’s look to suit your needs.
+Les Thèmes vous permettent de faire le design que vous souhaitez de votre site
+créé avec Croogo. Puisque on utilise MVC, vous avez un contrôle total de son
+allure pour s'adapter à vos besoins.
 
 .. toctree::
 

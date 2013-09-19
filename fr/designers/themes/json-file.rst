@@ -1,9 +1,14 @@
 JSON file
 #########
 
-A theme.json file is required for every theme in Croogo. This is required because themes can store useful information like menus and regions it uses, and this way it allows Croogo to query the database and make these information available to the theme without breaking MVC.
+Un fichier theme.json est nécessaire pour chaque thème dans Croogo. C'est
+nécessaire parce que les thèmes peuvent stocker des informations utiles comme
+les menus et les regions qu'il utilise, et de cette façon, il permet à Croogo
+de rechercher la base de données et de rendre ces informations disponibles
+pour le thème sans casser MVC.
 
-Content of an example theme.json file found at `app/View/Themed/MyTheme/webroot/theme.json` is shown below::
+Le contenu d'un fichier d'exemple theme.json file se trouvant dans
+`app/View/Themed/MyTheme/webroot/theme.json` est montré ci-dessous::
 
     {
       "name" : "Sample",
@@ -24,12 +29,12 @@ Content of an example theme.json file found at `app/View/Themed/MyTheme/webroot/
         ]
     }
 
-- name: your theme's name
-- description: your theme's description
-- screenshot: a small preview of your theme placed under `app/View/Themed/MyTheme/webroot/img/screenshot.png`
-- author: your name
-- authorEmail: your email
-- authorUrl: your website
-- menus: a list of menu aliases that the theme uses
-- regions: a list of regions that the theme uses for showing blocks
-- vocabularies (optional): a list of vocabulary aliases that the theme uses
+- name: le nom de votre thème
+- description: la description de votre thème
+- screenshot: Une petite preview de votre thème placée dans `app/View/Themed/MyTheme/webroot/img/screenshot.png`
+- author: votre nom
+- authorEmail: votre email
+- authorUrl: votre site internet
+- menus: une liste d'alias de de menu que le thème utilise
+- regions: une liste de regions que le thème utilise pour montrer les blocks
+- vocabularies (optionel): une liste d'alias de vocabulaires que le thème utilise

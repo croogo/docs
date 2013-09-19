@@ -1,17 +1,22 @@
-Fallback system
-###############
+Système de secours
+##################s
 
-It is absolutely fine if you do not want to create each and every view file for your theme. For example, if `app/View/Themed/MyTheme/Users/add.ctp` is not found, CakePHP will try to locate `app/View/Users/add.ctp`.
+C'est absolument ok si vous ne voulez pas créer chacun des fichiers de vue pour
+votre thème. Par exemple, si `app/View/Themed/MyTheme/Users/add.ctp` n'est pas
+trouvé, CakePHP va essayer de localiser `app/View/Users/add.ctp`.
 
-Extra fallbacks for Nodes
-=========================
+Solutions de secours supplémentaires pour les nœuds
+===================================================
 
-For theming, Croogo supports a few extra fallbacks for nodes, and whichever view file found first is rendered. Below are the lists of four actions of NodesController supporting extra view fallbacks:
+Pour les thèmes, Croogo supporte quelques solutions de secours supplémentaires
+pour les nœuds, et quel fichier de vue trouvé le premier est rendu. Ci-dessous,
+les listes de quatre actions de NodesController supportant les systèmes de vue
+suppléementaires:
 
 index
 -----
 
-- `app/View/Themed/MyTheme/Nodes/index_{type}.ctp`: where {type} is the alias of your content type, for e.g. 'blog'
+- `app/View/Themed/MyTheme/Nodes/index_{type}.ctp`: où {type} est l'alias de votre type de contenu, par ex 'blog'
 - `app/View/Themed/MyTheme/Nodes/index.ctp`
 - `app/View/Nodes/index.ctp`
 
@@ -25,7 +30,7 @@ search
 term
 ----
 
-- `app/View/Themed/MyTheme/Nodes/term_{id}.ctp`: where {id} is Term ID
+- `app/View/Themed/MyTheme/Nodes/term_{id}.ctp`: où {id} est l'ID de Term
 - `app/View/Themed/MyTheme/Nodes/term_{type}.ctp`
 - `app/View/Themed/MyTheme/Nodes/term.ctp`
 - `app/View/Nodes/term.ctp`
@@ -33,7 +38,7 @@ term
 view
 ----
 
-- `app/View/Themed/MyTheme/Nodes/view_{id}.ctp`: where {id} is Node ID
+- `app/View/Themed/MyTheme/Nodes/view_{id}.ctp`: où {id} est l'ID du Noeud
 - `app/View/Themed/MyTheme/Nodes/view_{type}.ctp`
 - `app/View/Themed/MyTheme/Nodes/view.ctp`
 - `app/View/Nodes/view.ctp`

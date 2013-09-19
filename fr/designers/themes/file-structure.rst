@@ -1,14 +1,17 @@
-File structure
-##############
+Structure de fichier
+####################
 
-A theme is identified by it's unique alias. If you have your theme under the directory `app/View/Themed/MyTheme`, then your theme's alias is MyTheme.
+Un thème est identifié par son alias unique. Si vous avez votre thème dans le
+répertoire `app/View/Themed/MyTheme`, alors l'alias de votre thème est MyTheme.
 
-A `theme.json` file is also required. You can see the JSON file used for the default theme here: `theme.json <http://github.com/croogo/croogo/blob/1.4/webroot/theme.json>`_.
+Un fichier `theme.json` est aussi nécessaire. Vous pouvez utiliser le fichier
+JSON utilisé pour le thème par défaut ici: `theme.json <http://github.com/croogo/croogo/blob/1.4/webroot/theme.json>`_.
 
 Structure
 =========
 
-For example, you have a theme with alias MyTheme. All your files should be placed like this:
+Par exemple, vous avez un thème avec l'alias MyTheme. Tous les fichiers doivent
+être placés comme ceci:
 
 - app/View/Themed/MyTheme/
   - Elements/
@@ -28,5 +31,5 @@ For example, you have a theme with alias MyTheme. All your files should be place
       - screenshot.png
     - theme.yml
 
-Do not forget the theme.json file. Your theme will not be available in the admin panel otherwise.
-
+N'oubliez pas le fichier theme.json. Votre thème ne sera pas disponible dans
+le panneau admin sinon.
