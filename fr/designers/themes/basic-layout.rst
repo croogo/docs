@@ -1,9 +1,10 @@
-Basic layout
-############
+Layout de base
+##############
 
-Lets call our theme MyTheme, so we need to place our default layout at `/app/View/Themed/MyTheme/Layouts/default.ctp`.
+Appelons notre thème MyTheme, ainsi nous devons placer notre layout par défaut
+dans `/app/View/Themed/MyTheme/Layouts/default.ctp`.
 
-At the beginning, we have something like this::
+Au début, nous avons quelque chose comme ceci::
 
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -14,15 +15,21 @@ At the beginning, we have something like this::
         </body>
     </html>
 
-The HEAD
-========
+Le HEAD
+=======
 
-This is where your page title, meta information, css, javascript info are shown. Croogo has a LayoutHelper to make things easier for you. You also get to use CakePHP's core helpers for more general tasks.
+C'est ici que se trouvent votre titre de page, les informations meta, le css,
+le javascript. Croogo a un LayoutHelper pour vous faciliter la vie. Vous
+pouvez aussi utiliser mes helpers du coeur de CakePHP pour des tâches plus
+générales.
 
 Page title
 ----------
 
-`$title_for_layout` variable is set from your controller (can be done from views too). And `Configure::read('Site.title')` is your website's title that you can set from admin panel under Settings > Site.
+La variable `$title_for_layout` est définie à partir de votre controller (peut
+être fait à partir des vues aussi). Et `Configure::read('Site.title')` est
+le titre de votre site web, que vous pouvez définir à partir d'un panneau
+admin dans Settings > Site.
 
 ::
 
@@ -30,10 +37,11 @@ Page title
         <title><?php echo $title_for_layout . ' | ' . Configure::read('Site.title'); ?></title>
     </head>
 
-Meta tags
----------
+Les balises Meta
+----------------
 
-This is as simple as calling a method from LayoutHelper. `$this->Layout->meta()` outputs all meta tags for your content.
+C'est aussi simple que d'appeler une méthode de LayoutHelper.
+`$this->Layout->meta()` affiche toutes les balises meta pour votre contenu.
 
 ::
 
@@ -45,7 +53,8 @@ This is as simple as calling a method from LayoutHelper. `$this->Layout->meta()`
 Feeds
 -----
 
-`$this->Layout->feed()` will output your RSS feed link for your promoted content.
+`$this->Layout->feed()` va afficher le lien de votre feed RSS  pour du contenu
+promu.
 
 ::
 
@@ -60,7 +69,8 @@ Feeds
 CSS
 ---
 
-If you have your css file placed under `/app/View/Themed/MyTheme/webroot/css/theme.css`::
+Si vous avez votre fichier css placé dans
+`/app/View/Themed/MyTheme/webroot/css/theme.css`::
 
     <head>
         <title><?php echo $title_for_layout . ' | ' . Configure::read('Site.title'); ?></title>
@@ -74,7 +84,10 @@ If you have your css file placed under `/app/View/Themed/MyTheme/webroot/css/the
 Javascript
 ----------
 
-Croogo has a Croogo object in javascript that stores information like the application's base path, etc. This is useful for other javascript related tasks. It can done by calling a single method `$this->Layout->js()`::
+Croogo a un objet Croogo dans javascript qui stocke les informations comme
+le chemin de base de l'application, etc. C'est utile pour les autres tâches
+liés au javascript. Cela peut être fait en appelant une méthode unique
+`$this->Layout->js()`::
 
     <head>
         <title><?php echo $title_for_layout . ' | ' . Configure::read('Site.title'); ?></title>
@@ -86,7 +99,9 @@ Croogo has a Croogo object in javascript that stores information like the applic
         ?>
     </head>
 
-CakePHP allows you to load javascript from your views so they go directly inside HEAD. For this, you need to echo out the variable `$scripts_for_layout`.
+CakePHP vous permet de charger le javascript à partir de vos vues, ainsi elles
+vont directement à l'intérieur du HEAD. Pour ceci, vous avez besoin d'afficher
+la variable `$scripts_for_layout`.
 
 ::
 
@@ -101,15 +116,17 @@ CakePHP allows you to load javascript from your views so they go directly inside
         ?>
     </head>
 
-The BODY
-========
+Le BODY
+=======
 
-This is where you output the actual content that is visible in the browser.
+C'est ici que vous affichez le contenu effectif qui est visible dans le
+navigateur.
 
 Content
 -------
 
-The output generated from your view is available in the variable `$content_for_layout`:
+La sortie générée à partir de votre vue est disponible dans la variable
+`$content_for_layout`:
 
 ::
 
@@ -122,7 +139,9 @@ The output generated from your view is available in the variable `$content_for_l
 Menu
 ----
 
-If you want to show a menu with alias main, it is as simple as `$this->Layout->menu('main')`. This will generate a nested unordered list of your main menu:
+Si vous voulez montrer un menu avec l'alias main, c'est est aussi simple que
+`$this->Layout->menu('main')`. Ce la générer une liste imbriquée non ordonnée
+de votre menu main:
 
 ::
 
@@ -140,7 +159,8 @@ If you want to show a menu with alias main, it is as simple as `$this->Layout->m
 Blocks
 ------
 
-If you want to show the blocks that belong to right region, just add `$this->Layout->blocks('right')`:
+Si vous voulez montrer les blocks qui appartiennent à la région right, ajoutez
+juste `$this->Layout->blocks('right')`:
 
 ::
 
@@ -158,7 +178,7 @@ If you want to show the blocks that belong to right region, just add `$this->Lay
         </div>
     </body>
 
-Final code of default.ctp
+Code final de default.ctp
 =========================
 
 ::

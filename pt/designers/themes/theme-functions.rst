@@ -11,7 +11,9 @@ All theme specific functions (if you need any) go to CustomHelper. If your theme
 	    }
 
 	}
+	?>
 
 CustomHelper is automatically loaded, so you can use it like this your views (.ctp files):
 
-    $this->Custom->myCustomMethod();
+	<?php
+	$this->Custom->myCustomMethod();
