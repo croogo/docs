@@ -9,9 +9,9 @@ If your plugin's name is Example, the content of `plugin.json` file at `app/Plug
         "name": "Example",
         "description": "Example plugin for demonstrating hook system",
 
-        "author": "Author Name"
-        "authorEmail": "author@example.com"
-        "authorUrl": "http://example.com"
+        "author": "Author Name",
+        "authorEmail": "author@example.com",
+        "authorUrl": "http://example.com",
 
         "dependencies": {
           "plugins": [
