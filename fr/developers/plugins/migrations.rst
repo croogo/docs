@@ -1,44 +1,52 @@
 Migrations
 ##########
 
-Generate Migrations
--------------------
+Générer des Migrations
+----------------------
 
-Firstly, you need to activate your plugin in the administration
+Premièrement, vous aurez besoin d'activer votre plugin dans l'administration
 
-Secondly, you need to generate your schema.php::
+Deuxièmement, vous aurez besoin de générer votre schema.php::
 
 		./Console/cake schema generate -p yourPlugin
 
-You must edit "schema.php" for some cleanup and refactoring. Since `schema.php`
-contains all existing tables in the application, you will need to remove them
-manually before including it in your plugin schema.  For example, table "acos", "aros", "aros_acos" and "i18n" belongs to Croogo core and must be removed from
-the generated file. Moreover join tables aren't added in `schema.php` and you 
-must add them by yourself.
+Vous devez éditer "schema.php" pour un peu de nettoyage et de refactoring.
+Puisque `schema.php` contient toutes les tables existantes de l'application,
+vous devrez les retirer manuellement avant de l'inclure dans votre schema de
+plugin. Par exemple, les tables "acos", "aros", "aros_acos" et "i18n"
+appartiennent au coeur de Croogo et doivent être retirées du fichier généré.
+De plus, les tables jointes ne sont pas ajoutées dans `schema.php` et vous
+devez les ajouter vous-même.
 
-Next, you must create your migrations file. Its name must be unique::
+Ensuite, vous devez créer votre fichier de migrations. Son nom doit être
+unique::
 
 		./Console/cake Migrations.migration generate -p yourPlugin
 
-Your migrations file is now created!
+Votre fichier de migrations est maintentant créé!
 
-Apply Migrations
-----------------
+Appliquer les Migrations
+------------------------
 
-It's your responsibility to apply migrations during activation of your plugin.
-You need to create (if the file doesn't exist) ``YourPluginActivation.php`` in your Config folder: ``app/Plugin/YourPlugin/Config``
+Il est de votre responsabilité d'appliquer les migrations pendant l'activation
+de votre plugin. Vous devez créer (si le fichiern'existe pas)
+``YourPluginActivation.php`` dans votre dossier Config:
+``app/Plugin/YourPlugin/Config``
 
-In the method ``onActivation(&$controller)`` you must add this 3 lines::
+Dans la méthode ``onActivation(&$controller)``, vous devez ajouter ces 3
+lignes::
 
 		<?php
 		App::uses('CroogoPlugin', 'Extensions.Lib');
 		$CroogoPlugin = new CroogoPlugin();
 		$CroogoPlugin->migrate('YourPlugin');
 
-Remove Migrations
------------------
+Retirer les Migrations
+----------------------
 
-If you want to remove all migrations during the deactivation you just need this 3 lines in method ``onDeactivation(&$controller)``::
+Si vous voulez retirer toutes les migrations pendant la désactivation, vous
+avez juste besoin de ces 3 lignes dans la méthode
+``onDeactivation(&$controller)``::
 
 		<?php
 		App::uses('CroogoPlugin', 'Extensions.Lib');

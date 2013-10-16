@@ -1,17 +1,22 @@
 Views
 #####
 
-Read the CakePHP docs on Views: http://book.cakephp.org/2.0/en/views.html.
+Lire la doc de CakePHP sur les Views: http://book.cakephp.org/2.0/en/views.html.
 
-What is a View?
-===============
+Quoi de neuf?
+=============
 
-Views are the V in MVC. Views are responsible for generating the specific output required for the request. Often this is in the form of HTML, XML, or JSON, but streaming files and creating PDF's that users can download are also responsibilities of the View Layer.
+Views sont le V dans MVC. Les Views sont responsables de la génération de
+sortie spécifique nécessaire pour la requête. Souvent, c'est sous forme de
+HTML, XML, ou JSON, mais le streaming de fichiers et la création de PDF que les
+utilisateurs peuvent télécharger sont aussi des responsabilités de la Couche
+View.
 
 Code
 ####
 
-From previous example of Recipes, we will be placing out view file at `/app/View/Recipes/view.ctp`::
+A partir de l'exemple précédent des Recipes, nous allons afficher le fichier
+de view dans `/app/View/Recipes/view.ctp`::
 
     <div class="recipes view">
         <h2><?php echo $recipe['Recipe']['title']; ?></h2>
@@ -19,7 +24,8 @@ From previous example of Recipes, we will be placing out view file at `/app/View
         <p><?php echo $recipe['Recipe']['body']; ?></p>
     </div>
 
-Plugin Views
-------------
+Les Views de Plugin
+-------------------
 
-If it is Recipes plugin's view, it would be found at `/app/Plugin/Recipes/View/view.ctp`.
+Si c'est la view du plugin Recipes, elle sera trouvée dans
+`/app/Plugin/Recipes/View/view.ctp`.

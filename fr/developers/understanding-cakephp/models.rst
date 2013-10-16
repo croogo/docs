@@ -1,30 +1,38 @@
 Models
 ######
 
-Read the CakePHP docs on Models: http://book.cakephp.org/2.0/en/models.html.
+Lire la doc de CakePHP sur les Models:
+http://book.cakephp.org/2.0/en/models.html.
 
-What is a Model?
-================
+Qu'est-ce qu'un Model?
+======================
 
-Models represent data and are used in CakePHP applications for data access. A model usually represents a database table but can be used to access anything that stores data such as files, LDAP records, iCal events, or rows in a CSV file.
+Les Models représentent les données et sont utilisés dans les applications
+CakePHP pour accéder aux données. Un model représente couramment une table
+de base de données mais peut aussi être utilisé pour accéder à tout ce qui
+stocke des données comme les fichiers, les enregistrements LDAP, les events
+iCal ou les lignes dans un fichier CSV.
 
-A model can be associated with other models. For example, a Recipe may be associated with the Author of the recipe as well as the Ingredient in the recipe.
+Un model peut être associé avec d'autres models. Par exemple, une Recipe peut
+être associée avec l'Author de la recipe ainsi que l'Ingredient dans la recipe.
 Code
 
-If you have a table named 'recipes' (with columns id, title, body), the model name would be Recipe and found at `/app/Model/Recipe.php`::
+Si vous avez une table nommée 'recipes' (avec les colonnes id, title, body), le
+nom du model serait Recipe et trouvé dans `/app/Model/Recipe.php`::
 
     <?php
     class Recipe extends AppModel {
 
     }
 
-Plugin Models
--------------
+Les Models du Plugin
+--------------------
 
-If it is Recipes plugin's model, it would be found at `/app/Plugin/Recipes/Model/Recipe.php`.
+Si c'est un model du plugin Recipes, il sera trouvé dans
+`/app/Plugin/Recipes/Model/Recipe.php`.
 
-Using Models in Controllers
-===========================
+Utilisation des Models dans les Controllers
+===========================================
 
 ::
 

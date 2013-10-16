@@ -1,7 +1,8 @@
-File structure
-##############
+Structure de Fichier
+####################
 
-A plugin is identified by it’s unique alias. If you have your plugin under the directory `app/Plugin/Example`, then your plugin’s alias is Example.
+Un plugin est identifié par son alias unique. Si vous avez votre plugin sous
+le répertoire `app/Plugin/Example`, alors l'alias de votre plugin est Example.
 
 Structure
 =========
@@ -30,7 +31,8 @@ Structure
     - img/
     - js/
 
-Do not forget the plugin.json file. This is required, otherwise the plugin will not be available in admin panel for activation.
+N'oubliez pas le fichier plugin.json. Il est nécessaire, sinon le plugin ne
+sera pas disponible dans le panneau admin pour l'activation.
 
-A full working plugin is available in the repository.
+Un plugin totalement fonctionnel est disponible dans le répertoire.
  

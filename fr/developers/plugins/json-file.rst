@@ -1,9 +1,13 @@
-JSON file
-#########
+Fichier JSON
+############
 
-A plugin.json file is required for every plugin in Croogo that requires to be activated from admin panel. It stores useful information like the developer's contact details, as well as information on it's dependencies.
+Un fichier plugin.json est nécessaire pour chaque plugin dans Croogo qui a
+besoin d'être activé à partir du panneau admin. Il stocke des informations
+utiles comme les détails de contact du développeur, ainsi que des informations
+sur ses dépendances.
 
-If your plugin's name is Example, the content of `plugin.json` file at `app/Plugin/Example/Config/plugin.json` could be::
+Si le nom de votre plugin est Example, le contenu du fichier `plugin.json`
+dans `app/Plugin/Example/Config/plugin.json` pourrait être::
 
     {
         "name": "Example",
@@ -21,9 +25,9 @@ If your plugin's name is Example, the content of `plugin.json` file at `app/Plug
             }
     }
 
-- name: your plugin's name
-- description: your plugin's description
-- author: your name
-- authorEmail: your email address
-- authorUrl: your website
-- dependencies (optional): list of other plugins that this plugin depends on
+- name: le nom de votre plugin
+- description: la description de votre plugin
+- author: votre nom
+- authorEmail: votre adresse email
+- authorUrl: votre website
+- dependencies (optional): liste des autres plugins dont ce plugin a besoin
