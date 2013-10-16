@@ -1,4 +1,6 @@
-Custom fields
-#############
+Champs personnalisés
+####################
 
-When you create a new node, you will notice a 'Custom fields' tab. It allows you to enter extra information for your nodes which can be useful for themes.
+Quand vous créez un nouveau noeud, vous remarquerez une tab 'Custom fields'
+(champ personnalisé). Il vous permet d'entrer une information supplémentaire
+pour vos noeuds ce qui peut être utile pour les themes.

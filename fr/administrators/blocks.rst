@@ -1,47 +1,54 @@
 Blocks
 ######
 
-Blocks are what you see in the sidebar (‘right’ region in default theme) as boxes. They belong to a particular region.
+Les Blocks sont ce que vous voyez dans la sidebar (region ‘right’ dans le theme
+default) en boites. Ils appartiennent à une region particulière.
 
 Elements
 ========
 
-All blocks are rendered via block.ctp element (found in app/Plugin/Blocks/View/Elements/block.ctp). You can use your own element too for your blocks by editing 'element' field when adding a block.
+Tous les blocks sont rendus via l'element block.ctp (trouvé dans
+app/Plugin/Blocks/View/Elements/block.ctp). Vous pouvez aussi utiliser votre
+propre element pour vos blocks en modifiant le champ 'element' lors de l'ajout
+d'un block.
 
-Tip: If it is a plugin element, enter 'PluginName.element_name'.
+Tip: Si c'est un element de plugin, entrez 'PluginName.element_name'.
 
-How to display a THIS and THAT in a block?
-==========================================
+Comment afficher un THIS et THAT dans un block?
+===============================================
 
-You are able to show an element, menu, vocabulary (nested list of terms), or a list of nodes by entering specially formatted text in your block’s body.
+Vous êtes capable de montrer un element, menu, vocabulary (une liste imbriquée
+de termes), ou une liste de noeuds en entrant un texte spécialement formaté
+dans le corps de votre block.
 
 Element
 -------
 
-For an element with file name my_element.ctp:
+Pour un element avec un nom de fichier my_element.ctp:
 
     [element:my_element] OR [e:my_element]
 
-Passing variables to your element:
+Passer des variables à votre element:
 
     [element:my_element myVar="value here" anotherVar="value here"]
 
-For plugin elements:
+Pour les elements de plugin:
 
     [element:my_element plugin="my_plugin"]
 
 Menu
 ----
 
-For a Menu with alias main:
+	Pour un Menu avec l'alias main:
 
     [menu:main] OR [m:main]
 
-Advanced
+Avancé
 
-``This options could drastically change the way your website works, handle with caution``
+``Ces options peuvent changer drastiquement la façon dont votre site web
+fonctionne, à manier avec précaution``
 
-Variables supported:
+Variables supportées:
 
 * tag="htmlTag" : tag to wrap content output
 * tagAttributes="className" : class name for wrapping tag
@@ -53,40 +60,47 @@ Variables supported:
 Vocabulary
 ----------
 
-For a Vocabulary with alias categories:
+Pour un Vocabulary avec l'alias categories:
 
     [vocabulary:categories] OR [v:categories]
 
-Advanced
+Avancé
 
-``This options could drastically change the way your website works, handle with caution``
+``Ces options peuvent changer drastiquement la façon dont votre site web
+fonctionne, à manier avec précaution``
 
-Variables supported :
+Variables supportées :
 
-* link="true" : if true, it creates a link for each vocabulary found, it will create the link using the supplied arguments for plugin, controller, action and type.
-* plugin="nameOfPlugin" : plugin name supplied to create link
-* controller="controller" : controller name supplied to create link
-* action="action" : action name supplied to create link
-* type="type" : type of node supplied to create link
+* link="true" : si à true, cela crée un lien pour chaque vocabulary trouvé, il
+  va créer le lien en utilisant les arguments fournis pour le plugin,
+  controller, action et le type.
+* plugin="nameOfPlugin" : nom du plugin fourni pour créer un lien
+* controller="controller" : nom du controller fourni pour créer un lien
+* action="action" : nom de l'action fourni pour créer un lien
+* type="type" : type de node fourni pour créer un lien
 * tag="htmlTag" : tag to wrap content output
 * tagAttributes="className" : className for wrapping tag
-* element="Taxonomy.vocabulary" : Element to use as template
+* element="Taxonomy.vocabulary" : Element à utiliser comme template
 
 Nodes
 -----
 
-For example, you want to show a list of 5 most recent blog posts as a block:
+Par exemple, vous voulez montrer une liste des 5 posts les plus récents dans un
+block:
 
     [node:recent_posts conditions="Node.type:blog;Node.status:1" order="Node.id DESC" limit="5"]
 
-Advanced
+Avancé
 
-``This options could drastically change the way your website works, handle with caution``
+``Ces options peuvent changer drastiquement la façon dont votre site web
+fonctionne, à manier avec précaution``
 
-Variables supported :
+Variables supportées :
 
-* link="true" : if true, it creates a link for each node found, it will create the link using the supplied arguments for plugin, controller, action and type.
-* plugin="nodes" : plugin name supplied to create link
-* controller="nodes" : controller name supplied to create link
-* action="view" : action name supplied to create link
-* element="Nodes.node_list" : Element to use as template
+* link="true" : si à true, cela crée un lien pour chaque vocabulary trouvé, il
+  va créer le lien en utilisant les arguments fournis pour le plugin,
+  controller, action et le type.
+* plugin="nodes" : nom du plugin fourni pour créer un lien
+* controller="nodes" : nom du controller fourni pour créer un lien
+* action="view" : nom de l'action fourni pour créer un lien
+* element="Nodes.node_list" : Element à utiliser comme template

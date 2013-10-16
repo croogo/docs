@@ -1,7 +1,10 @@
 Content
 #######
 
-In Croogo, every piece of content is called a node. For example, you have a blog post titled “Hello World”, it is a node. But it is important to understand that the comments associated to that blog post are not nodes.
+Dans Croogo, chaque pièce de contenu est appelé un node (noeud). Par exemple,
+vous avez un post de blog dont le titre est “Hello World”, c'est un noeud. Mais
+il est important de comprendre que les commentaires associés à ce post de blog
+ne sont pas des noeuds.
 
 .. toctree::
 

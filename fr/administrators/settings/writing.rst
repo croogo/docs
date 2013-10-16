@@ -1,4 +1,5 @@
 Writing
 #######
 
-Enable WYSIWYG Editor: Will load editors like Tinymce if they are active.
+Activez l'éditeur WYSIWYG: Va charger les éditeurs comme Tinymce si ils sont
+actifs.

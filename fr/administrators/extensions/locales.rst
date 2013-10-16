@@ -1,25 +1,26 @@
 Locales
 #######
 
-How to upload?
-==============
+Comment les uploader?
+=====================
 
-If you have your locale in a zip file, follow these instructions:
+Si vous avez votre locale dans un fichier zip, suivez ces instructions:
 
-- Log in to your admin panel
-- Go to Extensions > Locales page
-- Notice the Upload link on top. It will take you to a new page where you can upload the zip file.
+- Connectez-vous dans votre panneau admin
+- Allez sur la page Extensions > Locales
+- Remarquez le lien Upload en haut. Cela va vous emmener sur une nouvelle
+  page où vous pouvez uploader le fichier zip.
 
-Manual upload
-==============
+Manuel d'upload
+===============
 
-If the locale is Bengali, place your locale under /app/Locale/ben
+Si la locale est Bengali, placez votre locale dans /app/Locale/ben
 
-How to activate?
-================
+Comment l'activer?
+==================
 
-After uploading your locale, you need to activate it.
+Après avoir uploadé votre locale, vous avez besoin de l'activer.
 
-- From your admin panel, go to Extensions > Locales page
-- Clicking on Activate link will activate your locale
+- A partir de votre panneau admin, allez sur la page Extensions > Locales
+- Clickez sur le lien Activate va activer votre locale
  

@@ -1,7 +1,7 @@
-Settings
-########
+Paramètres
+##########
 
-This is where you manage your site's global settings.
+C'est ici que vous gérez les paramètres globaux de votre site.
 
 .. toctree::
 

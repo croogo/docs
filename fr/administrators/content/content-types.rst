@@ -1,25 +1,33 @@
-Content types
-=============
+Types de Contenu
+================
 
-By default, there are three content types:
+Par défaut, il y a trois types de contenu:
 
-- Page: for pages
-- Blog: for blog posts
-- Node: unless you are sure of what content type to use
+- Page: pour les pages
+- Blog: pour les posts de blog
+- Node: A moins que vous soyez sur du type de contenu à utiliser
 
-If you think you require a new content type, you are able to create one from admin panel.
+Si vous pensez que vous avez besoin d'un nouveau type de contenu, vous êtes
+capable d'en créer un à partir du panneau admin.
 
-Parameters
+
+Paramètres
 ==========
 
-When you add or edit content types, you will notice a 'Params' field where you can enter parameters. It is expected that one parameter is entered per line with a key/value pair using equal sign as a separator. Example below:
+Quand vous ajoutez ou modifiez des types de contenu, vous allez remarquer un
+champ 'Params' où vous pouvez entrer des paramètres. Il s'attend à ce qu'un
+paramètre soit entré par ligne avec une clé/valeur utilisant un signe égal
+en séparateur. Des exemples ci-dessous:
 
     my_param_key=value_here
     another_key=another_value
 
-Supported parameter keys for content types:
+Les clés de paramètre supportés pour les types de contenu:
 
-- nodes_per_page: Expects integer value greater than 0 for pagination limit of nodes
-- routes: Expects 0 or 1 for beautiful URLs like `/type-alias/node-slug`
+- nodes_per_page: Attend un nombre entier supérieur à 0 pour la limite de la
+  pagination des nodes
+- routes: Attend 0 ou 1 pour de belles URLs de type `/type-alias/node-slug`
 
-You are free to use more keys for parameters and they will be available in a nice formatted way by `ParamsBehavior <http://github.com/croogo/croogo/blob/master/models/behaviors/params.php>`_.
+Vous êtes libre d'utiliser plus de clés pour les paramètres et elles seront
+disponibles dans un formatage sympa pour le behavior
+`ParamsBehavior <http://github.com/croogo/croogo/blob/master/models/behaviors/params.php>`_.

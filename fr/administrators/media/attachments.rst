@@ -1,4 +1,8 @@
 Attachments
 ###########
 
-Attachments allows you to upload files and images. It takes care of resizing images to thumbnails for ease of browsing. Attachments browser is also integrated into rich text editors so you can upload/insert images and other media when editing content easily.
+Attachments vous permet d'uploader des fichiers et des images. Il s'occupe de
+redimensionner les images en vignettes pour faciliter la navigation. Un
+navigateur de vignettes et aussi intégré en éditeurs de texte riche, ainsi vous
+pouvez uploader/insérer facilement des images et d'autres medias lors de
+l'édition de contenu.

@@ -1,4 +1,7 @@
 Languages
 #########
 
-This is where you let the application know about languages that you plan to translate your content into. This is an i18n (Internationalization) feature and is used along with Translate plugin that comes with Croogo to turn your site into a multilingual one.
+C'est ici que vous dites à l'application les languages dans lesquels vous
+envisagez de traduire votre contenu. C'est une fonctionnalité i18n
+(Internationalization) et elle est utilisée avec le plugin Translate qui est
+fourni avec Croogo pour changer votre site en un site multilingue.

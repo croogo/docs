@@ -1,6 +1,7 @@
 Meta
 ####
 
-- Robots: Let search engines know if they are allowed to index the site.
+- Robots: Laisse savoir aux moteurs de recherche si ils sont autorisés à
+  indexer le site.
 - Keywords: Meta keywords.
 - Description: Meta description.

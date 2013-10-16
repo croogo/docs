@@ -1,18 +1,25 @@
-Multilingual
-############
+Multilingue
+###########
 
-Croogo comes with a Translate plugin. Activating it from Extensions > Plugins page will allow you to translate your content in other languages.
+Croogo fournit un plugin Translate. L'activer sur la page Extensions > Plugins
+va vous autoriser à traduire votre contenu dans d'autres langues.
 
-By default, it supports translations for Nodes, Blocks and Links. You can add more by editing /app/plugins/translate/config/translate_bootstrap.php file.
+Par défaut, il supporte les traductions pour les Nodes, Blocks et Links. Vous
+pouvez en ajouter plus en modifiant
+/app/plugins/translate/config/translate_bootstrap.php file.
 
-When you go to index pages of, for example, Nodes (Content > List), you will notice a `Translate` button for each item.
+Quand vous allez dans les pages index, par exemple, les Nodes (Content > List),
+vous remarquerez un bouton `Translate` pour chaque item.
 
 Languages
 =========
 
-Before you can start translating your content, you need to let Croogo know about other languages that you wish your content to be translated to. You can manage them from Settings > Languages page.
+Avant de commencer la traduction du contenu, vous avez besoin de dire à Croogo
+les languages dans lesquels vous souhaitez que votre contenu soit traduit. Vous
+pouvez les gérer sur la page Settings > Languages.
 
-Viewing translated content from front-end
-=========================================
+Voir le contenu traduit à partir du front-end
+=============================================
 
-Visit http://your-site.com/eng from your browser, where eng is the locale for English.
+Visitez http://your-site.com/eng à partir de votre navigateur, où eng est la
+locale pour English.

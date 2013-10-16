@@ -1,5 +1,5 @@
-Users
-#####
+Users (Utilisateurs)
+####################
 
 .. toctree::
 
