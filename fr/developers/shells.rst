@@ -1,62 +1,67 @@
 Shells
 ######
 
-Croogo now has the ability to install and activate extensions from the command line. To access the shells cd in your `app` folder and run the commands using: `./Console/cake [shell]`.
+Croogo a maintenant la capacité d'installer et d'activer les extensions à
+partir des lignes de commande. Pour accéder les shells cd dans votre dossier
+`app` et lance les commandes en utilisant: `./Console/cake [shell]`.
 
 Install Shell
 =============
 
-Most extensions you'll find on Github.com. To install the megamenu plugin extension from github type::
+La plupart des extensions que vous trouverez sur Github.com. Pour installer
+l'extension du plugin megamenu à partir de github, tapez::
 
     $ ./Console/cake install plugin https://github.com/rchavik/megamenu
 
-Or::
+Ou::
 
     $ ./Console/cake install plugin rchavik megamenu
 
-Themes can also be installed the same way::
+Les themes peuvent aussi être installés de la même façon::
 
     $ ./Console/cake install theme https://github.com/fahad19/themes
 
-If you have a zip file located somewhere else, type::
+Si vous avez un fichier zip localisé ailleurs, tapez::
 
     $ ./Console/cake install theme http://example.com/mytheme.zip
 
 Ext Shell
 =========
 
-You can activate/deactivate plugins and themes from the console. To activate the Megamenu extension previously installed::
+Vous pouvez activer/désactiver les plugins et themes à partir de la console.
+Pour activer l'extension Megamenu installé précedemment::
 
     $ ./Console/cake ext activate plugin Megamenu
 
-To deactivate::
+Pour désactiver::
 
     $ ./Console/cake ext deactivate plugin Megamenu
 
 Settings Shell
 ==============
 
-The Settings plugin provides a few utility command to manipulate configuration values:
+Le plugin Settings fournit quelques utilitaires de commandes pour manipuler
+les valeurs de configuration:
 
-- Reading a configuration::
+- Lire une configuration::
 
     $ ./Console/cake settings.settings read Site.title
 
-- Writing a configuration value::
+- Ecrire une valeur de configuration::
 
     $ ./Console/cake settings.settings write Site.title "My Awesome Site"
 
-- Deleting a configuration value::
+- Effacer une valeur de configuration::
 
     $ ./Console/cake settings.settings delete Custom.settingValue
 
-- Updating version information after an upgrade::
+- Mettre à jour une information de la version après un upgrade::
 
     $ ./Console/cake settings.settings upgrade_version_info
 
 Users Shell
 ===========
 
-You can reset a user's password from the shell::
+Vous pouvez réinitialiser un mot de passe de l'utilisateur à partir du shell::
 
     $ ./Console/cake users.users reset admin password

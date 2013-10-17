@@ -4,12 +4,12 @@ Callbacks
 Components
 ==========
 
-The following callbacks are supported for components by CakePHP.
+Les callbacks suivants sont supportés pour les components par CakePHP.
 
-- initialize: Called before Controller::beforeFilter()
-- startup: Called after the Controller::beforeFilter() and before the controller action
-- beforeRender: Called after the Controller::beforeRender(), after the view class is loaded, and before the Controller::render()
-- shutdown: Called after Controller::render() and before the output is printed to the browser.
+- initialize: Appelé avant Controller::beforeFilter()
+- startup: Appelé après the Controller::beforeFilter() et avant l'action du controller
+- beforeRender: Appelé après le Controller::beforeRender(), après que la classe de view est chargé, et avant le Controller::render()
+- shutdown: Appelé après Controller::render() et avant que la sortie soit affichée au navigateur.
 
 Code
 ----
@@ -48,27 +48,28 @@ Code
 
     }
 
-Learn more about components from http://book.cakephp.org/2.0/en/controllers/components.html.
+Apprenez plus sur les components dans
+http://book.cakephp.org/2.0/en/controllers/components.html.
 
 Helpers
 =======
 
-The following callbacks are supported for helpers by CakePHP:
+Les callbacks suivants sont supportés pour les helpers par CakePHP:
 
-- beforeRender: Called before the view file is rendered.
-- afterRender: Called after the view file is rendered but before the layout has been rendered.
-- beforeLayout: Called before the layout is rendered.
-- afterLayout: Called after the layout has rendered.
+- beforeRender: Appelé avant que le fichier de view soit rendu.
+- afterRender: Appelé après que le fichier de view est rendu mais avant que le layout ait été rendu.
+- beforeLayout: Appelé avant que le layout soit rendu.
+- afterLayout: Appelé après que le layout est rendu.
 
-Extra callbacks by Croogo for better integration
+Les callbacks supplémentaires dans Croogo pour une meilleure intégration
 
-- afterSetNode: Called after LayoutHelper::setNode(). A good place to modify node content.
-- beforeNodeInfo: Called before LayoutHelper::nodeInfo().
-- afterNodeInfo: Called after LayoutHelper::nodeInfo().
-- beforeNodeBody: Called before LayoutHelper::nodeBody().
-- afterNodeBody: Called after LayoutHelper::nodeBody().
-- beforeNodeMoreInfo: Called before LayoutHelper::nodeMoreInfo().
-- afterNodeMoreInfo: Called after LayoutHelper::nodeMoreInfo()
+- afterSetNode: Appelé après LayoutHelper::setNode(). Une bonne place pour modifier le contenu du node.
+- beforeNodeInfo: Appelé avant LayoutHelper::nodeInfo().
+- afterNodeInfo: Appelé après LayoutHelper::nodeInfo().
+- beforeNodeBody: Appelé avant LayoutHelper::nodeBody().
+- afterNodeBody: Appelé après LayoutHelper::nodeBody().
+- beforeNodeMoreInfo: Appelé avant LayoutHelper::nodeMoreInfo().
+- afterNodeMoreInfo: Appelé après LayoutHelper::nodeMoreInfo()
 
 Code
 ----
@@ -128,4 +129,5 @@ Code
 
     }
 
-Learn more about helpers from http://book.cakephp.org/2.0/en/views/helpers.html.
+En lire plus sur les helpers dans
+http://book.cakephp.org/2.0/en/views/helpers.html.

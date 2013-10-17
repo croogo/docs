@@ -1,17 +1,22 @@
 Components
 ##########
 
-Read the CakePHP docs on Components: http://book.cakephp.org/2.0/en/controllers/components.html.
+Lire la doc de CakePHP sur les Components:
+http://book.cakephp.org/2.0/en/controllers/components.html.
 
-What is a Component?
-====================
+Qu'est-ce qu'un Component?
+==========================
 
-Components are packages of logic that are shared between controllers. If you find yourself wanting to copy and paste things between controllers, you might consider wrapping some functionality in a component.
+Les Components sont des packages de logique qui sont partagés entre les
+controllers. Si vous trouvez vous-même que vous copiez et collez des choses
+entre les controllers, vous devriez considérer d'emballer quelques
+fonctionnalités dans un component.
 
 Code
 ====
 
-Assuming you want to create an Example component, it would be found at `/app/Controller/Component/ExampleComponent.php`::
+En admettant que vous vouliez créer un component Example, il sera trouvé dans
+`/app/Controller/Component/ExampleComponent.php`::
 
     <?php
     class ExampleComponent extends Component {
@@ -22,13 +27,14 @@ Assuming you want to create an Example component, it would be found at `/app/Con
 
     }
 
-Plugin components
------------------
+Components de Plugin
+--------------------
 
-If it Example plugin's component, it would be found at `/app/Plugin/Example/Controller/Component/ExampleComponent.php`.
+Si un component du plugin Example, il sera trouvé dans
+`/app/Plugin/Example/Controller/Component/ExampleComponent.php`.
 
-Using Components in Controllers
-===============================
+Utilisation de Components dans les Controllers
+==============================================
 
 ::
 
