@@ -1,37 +1,39 @@
 Plugins
 #######
 
-How to upload?
-==============
+Comment les uploader?
+=====================
 
-If you have your plugin in a zip file, follow these instructions:
+Si vous avez votre plugin dans un fichier zip, suivez ces instructions:
 
-- Log in to your admin panel
-- Go to Extensions > Plugins page
-- Notice the Upload link on top. It will take you to a new page where you can upload the zip file.
+- Connectez-vous dans votre panneau admin
+- Allez à la page Extensions > Plugins
+- Remarquez le lien Upload en haut. Cela va vous emmener sur une nouvelle
+  page où vous pouvez uploader le fichier zip.
 
-Manual upload
--------------
+Manuel d'upload
+===============
 
-Place your plugin under ``/app/Plugin/YourPluginName``
+Placez votre plugin dans ``/app/Plugin/YourPluginName``
 
-How to activate/deactivate?
-===========================
+Comment l'activer/le désactiver?
+================================
 
-After uploading your plugin, you need to activate it.
+Après avoir uploadé votre locale, vous avez besoin de l'activer.
 
-- From your admin panel, go to Extensions > Plugins page
-- Clicking on cross/tick icon will activate or deactivate your plugin
+- A partir de votre panneau admin, allez sur la page Extensions > Plugins
+- Clickez sur l'icon de croix/tick va activer ou désactiver votre plugin
 
 Migrations
 ==========
 
-When you upload a new plugin, a "Migrate" link might appear to the left of
-"Deactivate" link. This link allows to create or update the database for this
-plugin.
+Quand vous uploadez un nouveau plugin, un lien "Migrate" peu apparaitre
+à gauche du lien "Deactivate". Cel lien permet de créer ou de mettre à jour
+la base de données pour ce plugin.
 
-In most cases this operation is automatically applied when activating the
-plugin.  But in some cases, the plugin developer may require manual migrations
-for better control, or additional steps are required before activating the
-migration. In this case you need to read the plugin documentation before
-clicking on the link "Migrate" to know the possibles consequences.
+Dans la plupart des cas, cette opérration est appliquée automatiquement quand
+vous activez le plugin. Mais dans certains cas, le développeur du plugin peut
+avoir besoin du manuel de migrations pour un meilleur contrôle, ou bien ajouter
+des étapes supplémentaires sont nécessaires avant l'activation de la migration.
+Dans ce cas, vous avez besoin de lire la documentation du plugin avant de
+cliquer sur le lien "Migrate" pour connaître les conséquences possibles.

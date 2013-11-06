@@ -1,9 +1,11 @@
-Tips
-####
+Astuces
+#######
 
-Make it faster
-==============
+Rendez-le plus rapide
+=====================
 
-Croogo is shipped with debug level 1 enabled. You can disable it in `/app/Config/croogo.php` to make it faster. Replace line 37 with this::
+Croogo est fourni avec un niveau de debug activé à 1. Vous pouvez le désactiver
+dans `/app/Config/croogo.php` pour le rendre plus rapide. Remplacez la ligne 37
+avec ceci::
 
     Configure::write('debug', 0);

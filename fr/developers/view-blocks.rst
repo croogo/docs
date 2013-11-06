@@ -1,11 +1,13 @@
-View Blocks
-###########
+Les Blocks de View
+##################
 
-CakePHP view blocks have been implemented into Croogo 1.4 for admin_index, admin_add, and admin_edit.
+Les blocks de view de CakePHP ont été implementés dans Croogo 1.4 pour
+admin_index, admin_add, et admin_edit.
 
-Read the CakePHP docs on view blocks: http://book.cakephp.org/2.0/en/views.html#using-view-blocks.
+Lisez la doc de CakePHP sur les blocks de view:
+http://book.cakephp.org/2.0/en/views.html#using-view-blocks.
 
-You can override the default Croogo blocks::
+Vous pouvez surcharger les blocks par défaut de Croogo::
 
     <?php
     $this->extend('/Common/admin_index');
@@ -24,17 +26,17 @@ You can override the default Croogo blocks::
 admin_index
 ===========
 
-The following blocks are available:
+Les blocks suivants sont disponibles:
 
-- title: Override the title.
-- tabs: Override the li link tabs.
-- paging: Override the pagination numbers and counter.
+- title: Surcharge le titre.
+- tabs: Surcharge les li link tabs.
+- paging: Surcharge les nombres et le compteur de la pagination.
 
 admin_edit / admin_add
 ======================
 
-The following blocks are available:
+Les blocks suivants sont disponibles:
 
-- title: Override the title.
-- actions: Override the li link actions.
-- buttons: Override the Save and Cancel buttons.
+- title: Surcharge le titre.
+- actions: Surcharge les li link actions.
+- buttons: Surcharge les boutons Save et Cancel.

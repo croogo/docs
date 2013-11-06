@@ -1,25 +1,43 @@
 Controllers
 ###########
 
-Read the CakePHP docs on Controllers: http://book.cakephp.org/2.0/en/controllers.html.
+Lire la doc de CakePHP sur les Controllers:
+http://book.cakephp.org/2.0/en/controllers.html.
 
-What is a Controller?
-=====================
+Qu'est-ce qu'un Controller?
+===========================
 
-A controller is used to manage the logic for a part of your application. Most commonly, controllers are used to manage the logic for a single model. For example, if you were building a site for an online bakery, you might have a RecipesController and a IngredientsController managing your recipes and their ingredients. In CakePHP, controllers are named after the model they handle, in plural form.
+Un controller est utilisé pour gérer la logique pour une partie de votre
+application. La plus couramment, les controllers sont utilisés pour gérer la
+logique pour un model unique. Par exemple, si vous construisez un site pour une
+boulangerie en ligne, vous voudrez avoir un RecipesController et un
+IngredientsController gérant vos recipes et leurs ingredients. Dans CakePHP,
+controllers sont appelés d'après le model qu'ils gèrent, à la forme plurielle.
 
-The Recipe model is handled by the RecipesController, the Product model is handled by the ProductsController, and so on.
+Le model Recipe est géré par le RecipesController, le model Product est géré
+par ProductsController, et ainsi de suite.
 
-Your application's controllers are classes that extend the CakePHP AppController class, which in turn extends a core Controller class, which are part of the CakePHP library. The AppController class can be defined in `/app/Controller/AppController.php` and it should contain methods that are shared between all of your application’s controllers.
+Les controllers de votre application sont des classes qui étendent la classe
+AppController de CakePHP, qui à son tour étend une classe Controller du coeur,
+qui est une partie de la librairie de CakePHP. La classe AppController peut
+être définie dans `/app/Controller/AppController.php` et elle devrait contenir
+les méthodes qui sont partagées entre tous les controllers de votre application.
 
-Controllers can include any number of methods which are usually referred to as actions. Actions are controller methods used to display views. An action is a single method of a controller.
+Les Controllers peuvent inclure un certain nombre de méthodes qui se référent
+couramment aux actions. Les actions sont les méthodes du Controller utilisées
+pour afficher les views. Une action et une méthode unique d'un controller.
 
-CakePHP's dispatcher calls actions when an incoming request matches a URL to a controller’s action (refer to "Routes Configuration" for an explanation on how controller actions and parameters are mapped from the URL).
+Le dispatcher de CakePHP appelle les actions quanf une requête entrante
+matche une URL à une action d'un controller (réferrez-vous à la "Configuration
+des Routes" pour une explication sur la façon dont les actions du controller
+et les paramètres sont mappés à partir de l'URL).
 
 Code
 ====
 
-Returning to our online bakery example, our RecipesController might contain the view(), share(), and search() actions. The controller would be found in /app/Controller/RecipesController.php::
+En retournant à notre exemple de boulangerie en ligne, notre RecipesController
+pourrait contenir les actions view(), share(), et search(). Le controller
+serait trouvé dans /app/Controller/RecipesController.php::
 
     <?php
     class RecipesController extends AppController {
@@ -39,12 +57,15 @@ Returning to our online bakery example, our RecipesController might contain the 
     }
 
 
-Plugin Controllers
-------------------
+Les Controllers du Plugin
+-------------------------
 
-If it is Recipes plugin's controller, it would be found at `/app/Plugin/Recipe/Controller/RecipesController.php`.
+Si c'est un controller du plugin Recipes, il sera trouvé dans
+`/app/Plugin/Recipe/Controller/RecipesController.php`.
 
-How to see it in action?
-========================
+Comment le voir en action?
+==========================
 
-Controllers can be accessed from your browser from the address yoursite.com/controller_name/action_name. But it will show errors now, and we will require to create models and views for it too.
+Les Controllers peuvent être accessibles à partir du navigateur à l'adresse
+yoursite.com/controller_name/action_name. Mais il va maintenant montrer des
+erreurs, et nécessitera aussi de créer des models et views pour celui-ci.

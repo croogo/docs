@@ -1,9 +1,13 @@
 Plugins
 #######
 
-From book.cakephp.org: CakePHP allows you to set up a combination of controllers, models, and views and release them as a packaged application plugin that others can use in their CakePHP applications.
+A partir de book.cakephp.org: CakePHP vous permet de définir une combinaison de
+controllers, models, et views et les sort en plugin d'application packagé
+que d'autres peuvent utiliser dans leurs applications CakePHP.
 
-Croogo 1.4 is now using the default CakePHP bootstrap mechanism. However, Croogo has extra functionalities with routes and plugin activation callbacks.
+Croogo 1.4 utilise maintenant le mécanisme de bootstrap par défaut de CakePHP.
+Cependant, Croogo a des fonctionnalités supplémentaires avec les routes et les
+callbacks d'activation du plugin.
 
 .. toctree::
 

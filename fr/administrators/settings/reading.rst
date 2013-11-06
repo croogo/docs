@@ -1,5 +1,6 @@
 Reading
 #######
 
-- Nodes Per Page: Pagination limit for nodes
-- Date Time Format: In the format as you would use in a php date() function. For example: 'D, M d Y H:i:s'.
+- Nodes Par Page: Limite de Pagination pour les noeuds
+- Date Time Format: Dans le format que vous utiliseriez comme dans la fonction
+  date() de php. Par exemple: 'D, M d Y H:i:s'.

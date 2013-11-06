@@ -1,5 +1,5 @@
-Core plugins
-############
+Plugins du Coeur
+################
 
 .. toctree::
 

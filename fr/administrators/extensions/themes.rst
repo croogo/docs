@@ -1,22 +1,24 @@
 Themes
 ######
 
-How to upload?
-==============
+Comment les uploader?
+=====================
 
-If you have your theme in a zip file, follow these instructions:
+Si vous avez votre theme dans un fichier zip, suivez ces instructions:
 
-- Log in to your admin panel
-- Go to Extensions > Themes page
-- Notice the Upload link on top. It will take you to a new page where you can upload the zip file.
+- Connectez-vous dans votre panneau admin
+- Allez sur la page Extensions > Themes
+- Remarquez le lien Upload en haut. Cela va vous emmener sur une nouvelle
+  page où vous pouvez uploader le fichier zip.
 
-Manual upload
--------------
+Manuel d'upload
+===============
 
-Place your theme under /app/View/Themed/YourThemeName
+Placez votre theme dans /app/View/Themed/YourThemeName
 
-How to activate?
-================
+Comment l'activer?
+==================
 
-- Go to Extensions > Themes page
-- Below every theme's screenshot, notice the link Activate. Clicking it will activate your theme.
+- Allez sur la page Extensions > Themes
+- Au-dessous de chaque screenshot de theme, remarquez le lien Activate. Clickez
+dessus va activer votre theme.

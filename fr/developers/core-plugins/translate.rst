@@ -1,11 +1,14 @@
 Translate
 #########
 
-Translate plugin is one of the core plugins that is shipped with Croogo. If your website requires content in multiple languages (i18n), just activate it and you start translating right from your admin panel.
+Le plugin Translate est l'un des plugins du coeur qui est fourni avec Croogo.
+Si votre website nécessite du contenu dans plusieurs languages (i18n), activez
+le juste et vous commencez à traduire à partir de votre panneau admin.
 
-Once active, you will see a Translate link under 'Actions' column where Edit and Delete links are present.
+Une fois activé, vous verrz un lien Translate sous la colonne 'Actions' où
+les liens Edit et Delete sont présents.
 
-By default, it takes care of translations for these models:
+Par défaut, il s'occupe des traductions pour ces models:
 
 - Node
 - Block
@@ -14,7 +17,8 @@ By default, it takes care of translations for these models:
 Configuration
 =============
 
-Configuration for this at `/app/Plugin/Translate/Config/bootstrap.php` looks like this::
+La configuration pour ceci dans `/app/Plugin/Translate/Config/bootstrap.php`
+ressemble à ceci::
 
     Configure::write('Translate.models', array(
         'Node' => array(
@@ -32,7 +36,8 @@ Configuration for this at `/app/Plugin/Translate/Config/bootstrap.php` looks lik
         ),
     ));
 
-Now if you want your contact forms to be translated too, just add Contact model's name to the plugin's bootstrap like this::
+Maintenant si vous voulez que les formulaires de contact soient aussi traduits,
+ajoutez juste le nom du model Contact au bootstrap du plugin comme ceci::
 
     Configure::write('Translate.models', array(
         'Node' => array(

@@ -1,9 +1,11 @@
-Meta tags
-#########
+Balises Meta
+############
 
-You can control meta tags for your nodes using custom fields. Use these keys:
+Vous pouvez contrôler les balises meta pour les noeuds en utilisant les champs
+personnalisés. Utilisez ces clés:
 
-- meta_keywords: for keywords
-- meta_description: for description
+- meta_keywords: pour keywords
+- meta_description: pour description
 
-Any custom field key starting with `meta_` will be treated as a meta tag inside `<head>`.
+Toute clé de champ personnalisé commençant par `meta_` va être traitée comme
+une balise meta à l'intérieur du `<head>`.

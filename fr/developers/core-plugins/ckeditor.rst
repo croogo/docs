@@ -4,8 +4,8 @@ Ckeditor
 Configuration
 =============
 
-The `Example` plugin contains a sample code to activate Ckeditor
-in `Plugin/Example/Config/bootstrap.php` file::
+Le plugin `Example` contient un code d'exemple pour activer Ckeditor
+dans le fichier `Plugin/Example/Config/bootstrap.php`::
 
     $Localization = new L10n();
     Croogo::mergeConfig('Wysiwyg.actions', array(
@@ -36,9 +36,10 @@ in `Plugin/Example/Config/bootstrap.php` file::
         ),
     ));
 
-There are three presets: `basic`, `standard`, and `full`.
-The above code activates multiple Ckeditor instances with different presets.
-The last editor on `ExampleCustom` element shows how to configure the toolbar
-with specific buttons, color and language.
+Il y en a trois prédéfinis: `basic`, `standard`, et `full`.
+Le code ci-dessus active les multiples instances de Ckeditor avec les différents
+prédéfinis.
+Le dernier éditeur de l'element `ExampleCustom` montre comment configurer la
+barre d'outils avec des boutons spécifiques, la couleur et le language.
 
-Consult Ckeditor documentation for further details.
+Consultez la documentation de Ckeditor pour plus de détails.

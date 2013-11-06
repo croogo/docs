@@ -1,10 +1,11 @@
 Roles
 #####
 
-All users belong to a particular Role. Croogo distinguishes users in three different roles by default:
+Tous les utilisateurs appartiennent à un Role particulier. Croogo distingue
+les utilisateurs dans trois différents roles par défaut:
 
-- Admin: The administrator or super user
-- Registered: Registered and logged in user
-- Public: Visitors who are not logged in to the site
+- Admin: L'administrateur ou super utilisateur
+- Registered: L'utilisateur Enregistré et Connecté
+- Public: Les Visiteurs qui ne sont pas connectés au site
 
-You can add more roles to suit your needs.
+Vous pouvez ajouter plus de roles pour répondre à vos besoins.

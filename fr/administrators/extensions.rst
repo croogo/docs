@@ -1,7 +1,8 @@
 Extensions
 ##########
 
-Extensions in Croogo can be of three types. Themes, plugins and locales. They all help extend Croogo's features.
+Les Extensions dans Croogo peuvent être de trois types. Les Themes, plugins et
+locales. Ils aident tous à étendre les fonctionnalités de Croogo.
 
 .. toctree::
 

@@ -1,7 +1,7 @@
-Understanding CakePHP
-#####################
+Comprendre CakePHP
+##################
 
-Please visit http://book.cakephp.org for official documentation.
+Merci de visiter http://book.cakephp.org pour la documentation officielle.
 
 .. toctree::
 

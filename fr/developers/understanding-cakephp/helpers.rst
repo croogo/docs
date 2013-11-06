@@ -1,17 +1,23 @@
 Helpers
 #######
 
-Read the CakePHP docs on Helpers: http://book.cakephp.org/2.0/en/views/helpers.html.
+Lire la doc de CakePHP sur les Helpers:
+http://book.cakephp.org/2.0/en/views/helpers.html.
 
-What is a Helper?
-=================
+Qu'est-ce qu'un Helper?
+=======================
 
-Helpers are the component-like classes for the presentation layer of your application. They contain presentational logic that is shared between many views, elements, or layouts. This chapter will show you how to create your own helpers, and outline the basic tasks CakePHP's core helpers can help you accomplish.
+Les Helpers sont les classes comme les components mais pour la couche de
+présentation de votre application. Ils contiennent une logique de présentation
+partagée entre plusieurs views, elements ou layouts. Ce chapitre va vous
+montrer comment créer vos propres helpers, et souligne les tâches basiques que
+les helpers du coeur de CakePHP peuvent aider à accomplir.
 
 Code
 ====
 
-Let's say we named our helper Example, and it would be found at `/app/View/Helper/ExampleHelper.php`::
+Disons que nous appelons notre helper Example, et il serait trouvé dans
+`/app/View/Helper/ExampleHelper.php`::
 
     <?php
     class ExampleHelper extends AppHelper {
@@ -22,15 +28,17 @@ Let's say we named our helper Example, and it would be found at `/app/View/Helpe
 
     }
 
-Plugin helpers
---------------
+Les helpers du Plugin
+---------------------
 
-If it is Example plugin's helper, it would be found at `/app/Plugin/Example/View/Helper/ExampleHelper.php`.
+Si c'est un helper du plugin Example, il sera trouvé dans
+`/app/Plugin/Example/View/Helper/ExampleHelper.php`.
 
-Using Helpers in Views
-======================
+Utilisation des Helpers dans les Views
+======================================
 
-Before using helpers in views, we need to let our Controller know to get it loaded::
+Avant d'utiliser les helpers dans les views, nous avons besoin de le faire
+connaître à notre Controller en le chargeant::
 
     <?php
     class RecipesController extends AppController {
@@ -50,7 +58,8 @@ Before using helpers in views, we need to let our Controller know to get it load
 
     }
 
-Now we can use the helper from our view at /app/View/Recipes/view.ctp::
+Maintenant, nous pouvons utiliser le helper à partir de notre view dans
+/app/View/Recipes/view.ctp::
 
     <div class="recipes view">
         <h2><?php echo $recipe['Recipe']['title']; ?></h2>

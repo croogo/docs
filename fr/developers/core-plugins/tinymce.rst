@@ -2,17 +2,21 @@ TinyMCE
 #######
 
 .. versionchanged:: 1.5.1
-    TinyMCE is not included out of the box in 1.5.1.  Ckeditor has been
-    is now is the default RTE.
+    TinyMCE n'est pas inclu dans 1.5.1. Ckeditor est maintenant le RTE par
+    défaut.
 
-TinyMCE is a popular WYSIWYG editor by Moxiecode Systems. It is packaged and shipped as a plugin with Croogo.
+TinyMCE est un éditeur WYSIWYG populaire de Moxiecode Systems. Il est packagé
+et distribué en plugin avec Croogo.
 
-By default, the editor loads when you add/edit Nodes in your admin panel. To load it in other places and take more control of it's settings, see configuration information below.
+Par défaut, l'éditeur se charge quand vous ajoutez/modifiez les Nodes dans votre
+panneau admin. Pour le charger à d'autres endroits et avoir plus de contrôle
+sur ses configurations, regardez les informations de configuration ci-dessous.
 
 Configuration
 =============
 
-Configuration for this at `/app/Plugin/Tinymce/Config/bootstrap.php` looks like this::
+La configuration se trouve dans `/app/Plugin/Tinymce/Config/bootstrap.php` et
+ressemble à ceci::
 
     Configure::write('Tinymce.actions', array(
         'Nodes/admin_add' => array(
@@ -32,7 +36,9 @@ Configuration for this at `/app/Plugin/Tinymce/Config/bootstrap.php` looks like 
         ),
     ));
 
-For example, if you wanted to load the editor in your Products controller's add method for Product model's body field, add this line in the end::
+Par exemple, si vous souhaitez charger l'éditeur dans la méthode add du champ
+body du model Product de votre controller Products, ajoutez cette ligne à la
+fin::
 
     Configure::write('Tinymce.actions', array(
         'Nodes/admin_add' => array(
