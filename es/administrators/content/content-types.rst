@@ -2,6 +2,7 @@
 =============
 
 Por defecto, hay 3 tipos de contenido
+
 - Paginas: para paginas
 - Blog: para publicaciones
 - Nodo: si no estas seguro de que tipo de contenido usar
@@ -17,6 +18,7 @@ Cuando agrega o edita tipos de contenido, encontraras un campo de 'Params' (para
     otro_indice=otro_valor
 
 Los valores validos para indices en los tipos de contenido son:
+
 - nodes_per_page: Espera un valor unitario mayor a 0 para los limites de paginacion de los nodos
 - routes: Espera 0 o 1 para urls limpias como `/type-alias/node-slug`
 
