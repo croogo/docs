@@ -10,4 +10,5 @@ Developers
     developers/plugins
     developers/core-plugins
     developers/shells
+    developers/events
     developers/tips
