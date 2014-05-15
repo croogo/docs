@@ -102,8 +102,8 @@ Controller
 
 - **Controller.Users.registrationSuccessful**
 
-Miscelleneous
-=============
+Miscellaneous
+-------------
 
 - **Croogo.Status.setup**
 
