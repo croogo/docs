@@ -1,10 +1,43 @@
 Shells
 ######
 
-Croogo now has the ability to install and activate extensions from the command line. To access the shells cd in your `app` folder and run the commands using: `./Console/cake [shell]`.
+AclExtras
+=========
+
+Croogo bundles a modified version of AclExtras plugin. The plugin provides
+a facility to manage/synchronize or recover your acl tables. The following
+commands are available:
+
+**aco_update**
+
+    Add new ACOs for new controllers and actions. Does not remove nodes from        the ACO table.
+
+**aco_sync**
+
+    Perform a full sync on the ACO table.Will create new ACOs or missing
+    controllers and actions.Will also remove orphaned entries that no longer
+    have a matching controller/action
+
+**aco_sync_contents**
+
+    Perform a full content sync on the ACO table. Will create new ACOs or
+    missing contents. Will also remove orphaned entries that no longer have a
+    matching contents.
+
+    You need to run this first after activating "Row Level Access Control"
+
+**verify**
+
+    Verify the tree structure of either your Aco or Aro Trees
+
+**recover**
+
+    Recover a corrupted Tree
 
 Install Shell
 =============
+
+Croogo now has the ability to install and activate extensions from the command line. To access the shells cd in your `app` folder and run the commands using: `./Console/cake [shell]`.
 
 Most extensions you'll find on Github.com. To install the megamenu plugin extension from github type::
 
