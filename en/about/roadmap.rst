@@ -4,6 +4,11 @@
 Roadmap
 #######
 
+The task lists described in this page is outdated.
+All tasks, bugs, scheduled releases are now tracked in github:
+
+    http://github.com/croogo/croogo/issues/milestones
+
 2.0.x
 -----
 
