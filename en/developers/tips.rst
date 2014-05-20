@@ -46,3 +46,22 @@ Hook the ToolbarComponent to all controllers::
 
     // Config/bootstrap.php
     Croogo::hookComponent('*', 'DebugKit.Toolbar');
+
+Blackholed Request
+------------------
+
+Debugging blackholed requests can be tricky. The first thing that you should
+do if you get blackholed requests is to check your ``tmp/logs/error.log`` file.
+A simple syntax error or a ``PDOException`` may have triggered the blackhole
+callback.
+
+In some cases, the request may cause an infinite loop.  If you get this
+problem, clear out your ``error.log`` and re-do the request.  If the problem is
+logged, it would be in the first few lines of this file.
+
+Secondly, verify that:
+
+    * Your input fields are created using the FormHelper
+    * Your forms are closed using FormHelper::end()
+    * Your form is created with `type` => 'file' if you're working with file uploads
+    * You are not using nested forms
