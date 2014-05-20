@@ -11,22 +11,6 @@ Croogo is shipped with debug level 1 enabled. You can disable it in `/app/Config
 
     Configure::write('debug', 0);
 
-DebugKit
---------
-
-Install DebugKit into `Plugin/DebugKit`::
-
-    git clone http://github.com/cakephp/debug_kit Plugin/DebugKit
-
-Activate DebugKit plugin::
-
-    Console/cake ext activate plugin -f DebugKit
-
-Hook the ToolbarComponent to all controllers::
-
-    // Config/bootstrap.php
-    Croogo::hookComponent('*', 'DebugKit.Toolbar');
-
 Symlink plugin and theme assets
 -------------------------------
 
@@ -43,3 +27,22 @@ Linking a plugin asset directory::
 
     cd croogo-app/webroot/
     ln -s ../Plugin/Gallery/webroot Gallery
+
+Debugging
+=========
+
+DebugKit
+--------
+
+Install DebugKit into `Plugin/DebugKit`::
+
+    git clone http://github.com/cakephp/debug_kit Plugin/DebugKit
+
+Activate DebugKit plugin::
+
+    Console/cake ext activate plugin -f DebugKit
+
+Hook the ToolbarComponent to all controllers::
+
+    // Config/bootstrap.php
+    Croogo::hookComponent('*', 'DebugKit.Toolbar');
