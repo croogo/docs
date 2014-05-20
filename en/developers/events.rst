@@ -72,39 +72,75 @@ Controller
 
 - **Controller.Links.setupLinkChooser**
 
+  Triggered by the Menus plugin before displaying the link chooser dialog
+
 - **Controller.Nodes.afterAdd**
+
+  Triggered by the NodesController after a node was successfully added
 
 - **Controller.Nodes.afterEdit**
 
+  Triggered by the NodesController after a node was successfully edited
+
 - **Controller.Users.activationFailure**
+
+  Triggerred when a user failed to be activated
 
 - **Controller.Users.activationSuccessful**
 
+  Triggerred when a user has been successfully activated
+
 - **Controller.Users.adminLoginFailure**
+
+  Triggerred when a administrator user has failed to login
 
 - **Controller.Users.adminLoginSuccessful**
 
+  Triggerred when a administrator user has login successfully
+
 - **Controller.Users.adminLogoutSuccessful**
+
+  Triggerred when a administrator user has logout successfully
 
 - **Controller.Users.afterLogout**
 
+  Triggerred when a user has logout successfully
+
 - **Controller.Users.beforeAdminLogin**
+
+  Triggerred before the admin login screen is rendered
 
 - **Controller.Users.beforeLogin**
 
+  Triggerred before the login screen is rendered
+
 - **Controller.Users.beforeLogout**
+
+  Triggerred before a user is logged out
 
 - **Controller.Users.loginFailure**
 
+  Triggerred when a user has failed to login
+
 - **Controller.Users.loginSuccessful**
+
+  Triggerred when a user has login successfully
 
 - **Controller.Users.registrationFailure**
 
+  Triggerred when a user has failed registration
+
 - **Controller.Users.registrationSuccessful**
+
+  Triggerred when a user has successfully registered
 
 Miscellaneous
 -------------
 
 - **Croogo.Status.setup**
 
+  Triggerred when the CroogoStatus is instantiated.
+
 - **Croogo.Status.status**
+
+  Triggerred before statuses are retrieved.
