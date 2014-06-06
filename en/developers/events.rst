@@ -28,11 +28,11 @@ request is an administrator session
 Model
 -----
 
-- **Model.Node.afterSaveNode**
+- **Model.Node.beforeSaveNode**
 
   Trigger before a Node is saved
 
-- **Model.Node.beforeSaveNode**
+- **Model.Node.afterSaveNode**
 
   Trigger after a Node is saved
 
