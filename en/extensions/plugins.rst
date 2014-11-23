@@ -1,15 +1,29 @@
 Plugins
 #######
 
-Compatible with Croogo 1.4.x:
------------------------------
+Croogo 2.x
+----------
+
+* `Gallery <https://github.com/xintesa/Gallery>`_ by Xintesa
+* `Assets <https://github.com/xintesa/Asset>`_ by Xintesa
+* `SeoLite <https://github.com/xintesa/Seolite>`_ by Xintesa
+* `Audit <https://github.com/xintesa/Audit>`_ by Xintesa
+* `ClearCache <https://github.com/rchavik/clear_cache>`_ by Rachman Chavik
+* `Sites <https://github.com/rchavik/sites>`_ by Rachman Chavik
+* `Switcher <https://github.com/rchavik/switcher>`_ by Rachman Chavik
+* `ClearCache <https://github.com/LuMAXW3B/Croogo_ClearCache>`_ by LuMAXW3b
+* `ClearLog <https://github.com/LuMAXW3B/Croogo_ClearLog>`_ by LuMAXW3b
+* `NodeAttachments <https://github.com/elcuro/nodeattachment>`_ by elcuro
+
+Croogo 1.4.x
+------------
 
 * `Events <https://github.com/thoth/event>`_ by Thomas Rader
 * `Megamenu <https://github.com/rchavik/megamenu>`_ by Rachman Chavik
 * `Route <https://github.com/deplorable/Croogo_Plugins_Route>`_ by Damian Grant
 
-Compatible with Croogo 1.3.x:
------------------------------
+Croogo 1.3.x
+------------
 
 * `Advertising <http://github.com/chroposnos/Advertising-Croogo-Plugin>`_ by Israel Segundo
 * `Block Anywhere <https://github.com/firecreek/BlockAnywhere>`_ by Darren Moore
@@ -47,8 +61,8 @@ Compatible with Croogo 1.3.x:
 * `Typed Tags <http://scvgeo.com/blog/typed-tags-croogo-plugin>`_ by Felipe Garcia Hernandez
 * `Video Widget <http://github.com/chroposnos/video_widget>`_ by Israel Segundo
 
-Not compatible with the latest version of Croogo (yet)
-------------------------------------------------------
+Legacy
+------
 
 * `Cycle <http://www.shift8creative.com/blog/cycle-plugin>`_ by Tom Maiaroto
 * `Geshi <http://github.com/phpedinei/geshi>`_ by Edinei L. Cipriani
