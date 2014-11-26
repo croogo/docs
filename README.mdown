@@ -1,7 +1,5 @@
-Croogo Experimental Docs
-=========================
-
-This documentation will hopefully one day replace the existing wiki.  Hopefully enabling community contributions and enabling multiple format documentation generation.
+Croogo Docs
+===========
 
 Requirements
 ------------
