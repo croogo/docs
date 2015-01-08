@@ -1,12 +1,19 @@
 
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 body { line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 300; color: #444; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 p { line-height: 25px; }
 tt { font-family: inherit; }
 
+#wrapper { min-height: 100%; position: relative; }
 #header { background: #111; color: #fff; }
 #header a { color: #fff; }
 #header a.logo { display: inline-block; height: 38px; width: 150px; padding: 0px; background: url(./img/croogo.png) left bottom no-repeat; background-size: 76%; }
@@ -60,7 +67,8 @@ tt { font-family: inherit; }
 #welcome .section { width: 48%; float: left; padding: 5px; }
 #welcome .section h2 { border-bottom: 1px solid #ccc; }
 
-#footer { background: #333; color: #fff; font-size: 14px; font-weight: 400; padding: 5px 0px; }
+#footer { background: #333; color: #fff; font-size: 14px; font-weight: 400; padding: 0px; height: 32px; position: absolute; bottom: 0; }
+#footer { width: 100%; border-top: 1px solid #cecece; }
 #footer a { color: #fff; }
 #footer #links a { display: inline-block; margin-right: 10px; }
 #footer #connect { text-align: right; }
