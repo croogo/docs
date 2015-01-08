@@ -1,6 +1,14 @@
 {% extends "default/layout.html" %}
 {% set script_files = [] %}
-{% set css_files = ['_static/reset.css', '_static/960.css', '_static/pygments.css', '_static/theme.css'] %}
+{% set css_files = ['_static/reset.css', '_static/960.css'] %}
+
+{% block extrahead %}
+    <!--[if !IE 7]>
+      <style type="text/css">
+        #wrap {display:table;height:100%}
+      </style>
+    <![endif]-->
+{% endblock %}
 
 {%- macro prevnext() %}
   <ul>
