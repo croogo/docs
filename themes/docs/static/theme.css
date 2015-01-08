@@ -67,7 +67,7 @@ tt { font-family: inherit; }
 #welcome .section { width: 48%; float: left; padding: 5px; }
 #welcome .section h2 { border-bottom: 1px solid #ccc; }
 
-#footer { background: #333; color: #fff; font-size: 14px; font-weight: 400; padding: 0px; height: 32px; position: absolute; bottom: 0; }
+#footer { background: #333; color: #fff; font-size: 14px; font-weight: 400; padding: 0px; height: 32px; position: relative; bottom: 0; }
 #footer { width: 100%; border-top: 1px solid #cecece; }
 #footer a { color: #fff; }
 #footer #links a { display: inline-block; margin-right: 10px; }
