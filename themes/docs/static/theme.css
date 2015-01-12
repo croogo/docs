@@ -1,5 +1,15 @@
-
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+* { margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+body:before {
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
+}
 
 body { line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 300; color: #444; }
 a { text-decoration: none; }
@@ -16,7 +26,9 @@ tt { font-family: inherit; }
 #nav li a { padding: 10px 5px 13px 5px; display: inline-block; font-weight: 400; font-size: 14px; }
 #nav li a:hover { background: #555; text-decoration: none; }
 
-#main { padding: 10px 0px 10px 0px; font-size: 16px; }
+#wrap { min-height: 100%; }
+
+#main { overflow: auto; padding-bottom: 42px; padding: 10px 0px 10px 0px; font-size: 16px; }
 #main a.headerlink { color: #444; text-decoration: none; padding: 0px 5px; display: none; }
 #main a.headerlink:hover { text-decoration: none; }
 #main p { margin: 10px 0px; }
@@ -47,7 +59,7 @@ tt { font-family: inherit; }
 #main .prevnext ul li a { display: inline-block; padding: 5px; border: 0px; text-decoration: underline; }
 #main .prevnext ul li a:hover { text-decoration: none; }
 
-#sidebar { padding-top: 10px; }
+#sidebar { padding-top: 10px; margin-bottom: 54px; }
 #sidebar h3 { display: none; }
 #sidebar ul { list-style: none; margin: 0px; padding: 0px; }
 #sidebar ul li { padding: 6px 0px; }
@@ -60,8 +72,9 @@ tt { font-family: inherit; }
 #welcome .section { width: 48%; float: left; padding: 5px; }
 #welcome .section h2 { border-bottom: 1px solid #ccc; }
 
-#footer { background: #333; color: #fff; font-size: 14px; font-weight: 400; padding: 5px 0px; }
+#footer { background: #333; color: #fff; font-size: 14px; font-weight: 400; padding: 0px; height: 42px; position: relative; margin-top: -34px; height: 34px; clear: both; width: 100%; }
 #footer a { color: #fff; }
+#footer #links, #footer #connect { padding: 10px 0; }
 #footer #links a { display: inline-block; margin-right: 10px; }
 #footer #connect { text-align: right; }
 #footer #connect a { display: inline-block; margin-left: 10px; }

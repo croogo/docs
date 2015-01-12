@@ -1,6 +1,14 @@
 {% extends "default/layout.html" %}
 {% set script_files = [] %}
-{% set css_files = ['_static/reset.css', '_static/960.css', '_static/pygments.css', '_static/theme.css'] %}
+{% set css_files = ['_static/reset.css', '_static/960.css'] %}
+
+{% block extrahead %}
+    <!--[if !IE 7]>
+      <style type="text/css">
+        #wrap {display:table;height:100%}
+      </style>
+    <![endif]-->
+{% endblock %}
 
 {%- macro prevnext() %}
   <ul>
@@ -13,50 +21,52 @@
 {%- endmacro %}
 
 {%- block content %}
-<div id="header">
-  <div class="container_12">
-    <div class="grid_6">
-      <a class="logo" href="http://croogo.org"> </a>
-    </div>
-
-    <div class="grid_6">
-      <ul id="nav">
-        <li><a href="http://docs.croogo.org">Documentation</a></li>
-        <li><a href="http://blog.croogo.org">Blog</a></li>
-        <li><a href="http://github.com/croogo/croogo">Source</a></li>
-        <li><a href="http://github.com/croogo/croogo/issues/">Issues</a></li>
-        <li><a href="https://groups.google.com/forum/?fromgroups#!forum/croogo">Discuss</a></li>
-        <li><a href="http://downloads.croogo.org">Download</a></li>
-      </ul>
-    </div>
-
-    <div class="clear"></div>
-  </div>
-</div>
-
-<div id="main">
-  <div class="container_12">
-    <div class="grid_3">
-      <div id="sidebar">
-        {%- for sidebartemplate in sidebars %}
-        {%- include sidebartemplate %}
-        {%- endfor %}
-      </div>
-    </div>
-
-    <div class="grid_9">
-      <div id="content">
-        {% block body %} {% endblock %}
+<div id="wrap">
+  <div id="header">
+    <div class="container_12">
+      <div class="grid_6">
+        <a class="logo" href="http://croogo.org"> </a>
       </div>
 
-      <div class="prevnext">
-        {{ prevnext() }}
+      <div class="grid_6">
+        <ul id="nav">
+          <li><a href="http://docs.croogo.org">Documentation</a></li>
+          <li><a href="http://blog.croogo.org">Blog</a></li>
+          <li><a href="http://github.com/croogo/croogo">Source</a></li>
+          <li><a href="http://github.com/croogo/croogo/issues/">Issues</a></li>
+          <li><a href="https://groups.google.com/forum/?fromgroups#!forum/croogo">Discuss</a></li>
+          <li><a href="http://downloads.croogo.org">Download</a></li>
+        </ul>
       </div>
-    </div>
 
-    <div class="clear"></div>
-  </div>
-</div>
+      <div class="clear"></div>
+    </div>
+  </div><!-- /#header -->
+
+  <div id="main">
+    <div class="container_12">
+      <div class="grid_3">
+        <div id="sidebar">
+          {%- for sidebartemplate in sidebars %}
+          {%- include sidebartemplate %}
+          {%- endfor %}
+        </div>
+      </div>
+
+      <div class="grid_9">
+        <div id="content">
+          {% block body %} {% endblock %}
+        </div>
+
+        <div class="prevnext">
+          {{ prevnext() }}
+        </div>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+  </div><!-- /#main -->
+</div><!-- /#wrap -->
 {%- endblock %}
 
 
@@ -90,5 +100,5 @@
 
     <div class="clear"></div>
   </div>
-</div>
+</div><!-- /#footer -->
 {% endblock %}
