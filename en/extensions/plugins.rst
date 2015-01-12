@@ -14,7 +14,7 @@ Croogo 2.x
 * `ClearCache <https://github.com/LuMAXW3B/Croogo_ClearCache>`_ by LuMAXW3b
 * `ClearLog <https://github.com/LuMAXW3B/Croogo_ClearLog>`_ by LuMAXW3b
 * `NodeAttachments <https://github.com/elcuro/nodeattachment>`_ by elcuro
-* `CroogoMark <https://github.com/dakota/croogomark>` _ by Dakota
+* `CroogoMark <https://github.com/dakota/croogomark>`_ by Dakota
 
 Croogo 1.4.x
 ------------
