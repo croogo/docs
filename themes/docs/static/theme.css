@@ -72,8 +72,9 @@ tt { font-family: inherit; }
 #welcome .section { width: 48%; float: left; padding: 5px; }
 #welcome .section h2 { border-bottom: 1px solid #ccc; }
 
-#footer { background: #333; color: #fff; font-size: 14px; font-weight: 400; padding: 0px; height: 42px; position: relative; margin-top: -42px; height: 42px; clear: both; width: 100%; }
+#footer { background: #333; color: #fff; font-size: 14px; font-weight: 400; padding: 0px; height: 42px; position: relative; margin-top: -34px; height: 34px; clear: both; width: 100%; }
 #footer a { color: #fff; }
+#footer #links, #footer #connect { padding: 10px 0; }
 #footer #links a { display: inline-block; margin-right: 10px; }
 #footer #connect { text-align: right; }
 #footer #connect a { display: inline-block; margin-left: 10px; }
