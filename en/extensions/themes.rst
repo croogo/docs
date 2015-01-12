@@ -18,7 +18,7 @@ Admin Themes
 ------------
 
 * `AdminExtras <https://github.com/rchavik/Readable-Theme>`_ by Rachman Chavik
-* `TbsAdmin <https://github.com/el-cms/Tbs-admin`_ by el-cms
+* `TbsAdmin <https://github.com/el-cms/Tbs-admin>`_ by el-cms
 
 Croogo 1.3.x
 ============
