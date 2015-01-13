@@ -1,6 +1,8 @@
 Dashboards
 ##########
 
+.. versionadded:: 2.2.0
+
 Registering Dashboard block
 ===========================
 
