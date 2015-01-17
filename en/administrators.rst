@@ -4,6 +4,7 @@ Administrators
 
   administrators/content
   administrators/menus
+  administrators/links
   administrators/blocks
   administrators/extensions
   administrators/media
