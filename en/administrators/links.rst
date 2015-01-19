@@ -23,6 +23,4 @@ When you create a link, you have these options:
   - *Desription:* Title attribute
   - *Rel:* Rel attribute
   - *Target:* Target attribute
-  - *Params:*
-
-.. Todo:: Find params documentation....
+  - *Params:* See :ref:`parameters`

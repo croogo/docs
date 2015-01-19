@@ -11,3 +11,4 @@ Administrators
   administrators/contacts
   administrators/users
   administrators/settings
+  administrators/params
