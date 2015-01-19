@@ -9,17 +9,12 @@ By default, there are three content types:
 
 If you think you require a new content type, you are able to create one from admin panel.
 
-Parameters
-==========
+Valid Parameters
+================
 
-When you add or edit content types, you will notice a 'Params' field where you can enter parameters. It is expected that one parameter is entered per line with a key/value pair using equal sign as a separator. Example below:
-
-    my_param_key=value_here
-    another_key=another_value
-
-Supported parameter keys for content types:
+Supported parameters for content types:
 
 - nodes_per_page: Expects integer value greater than 0 for pagination limit of nodes
 - routes: Expects 0 or 1 for beautiful URLs like `/type-alias/node-slug`
 
-You are free to use more keys for parameters and they will be available in a nice formatted way by `ParamsBehavior <http://github.com/croogo/croogo/blob/master/models/behaviors/params.php>`_.
+See: :ref:`parameters`.
