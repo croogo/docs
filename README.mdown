@@ -13,7 +13,7 @@ You can read all of the documentation within as its just in plain text files, ma
 
 You can install sphinx using:
 
-	easy_install sphinx
+	easy_install sphinx==1.2.3
 
 You can install the phpdomain using:
 
