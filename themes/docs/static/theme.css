@@ -83,3 +83,5 @@ tt { font-family: inherit; }
 #footer .separator { margin-left: 10px; }
 
 .strike { text-decoration: line-through; }
+
+.note { background: #f8f8f8; border: 1px solid #e5e5e5; font-style: normal; padding: 1px 3px; }

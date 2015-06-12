@@ -5,6 +5,7 @@ Developers
 
     developers/working-with-git
     developers/understanding-cakephp
+    developers/object-inheritance
     developers/callbacks
     developers/view-blocks
     developers/plugins
