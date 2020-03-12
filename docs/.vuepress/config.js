@@ -6,6 +6,7 @@ module.exports = {
       {
         title: 'Guide',
         children: [
+          'guide/migration',
           'guide/creating-plugins',
         ]
       }
