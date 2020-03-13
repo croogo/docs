@@ -3,7 +3,7 @@ title: Migrating from &lt; 4.x
 ---
 
 There is no fully automatic approach to migrate a
- project to _Croogo 4.x_ at the moment, but this must be done
+ project to _Croogo 4.x_ at the moment, so this must be done
  manually using one of these main approaches:
 1) Migrate an existing installation by changing the source files
 and bumping version in the `composer.json` file.
