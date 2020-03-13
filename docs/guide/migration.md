@@ -6,7 +6,9 @@ There is no fully automatic approach to migrate a
  project to _Croogo 4.x_ at the moment, so this must be done
  manually using one of these main approaches:
 1) Migrate an existing installation by changing the source files
-and bumping version in the `composer.json` file.
+and bumping version in the `composer.json` file (**TODO**: add some
+links to existing scripts/guides) followed by migrating the code
+in the project (**TODO** is this correct?).
 2) Create a new project from scratch and start migrating the
 database contents and any custom code to the newly installed project.
 
@@ -22,7 +24,7 @@ environment and continue step-by-step through the migration.
 So for now we'll be exclusively handling the second approach and install
 a new project from scratch and start from there.
 
-TODO: add some links to how to manage the first approach.
+**TODO**: add some links for more information on the first approach.
 
 # Installation
 This step assumes you already have `composer` and necessary `php`-extensions
