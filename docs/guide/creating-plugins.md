@@ -4,311 +4,183 @@ title: Create a plugin
 
 # Creating a plugin
 
-## Bake
+In this example, we use Bake to create a Croogo4 plugin that manages Books and Authors.
 
-In this example, we will use the `bake` command to create a plugin that
-manages Authors and Books.  The following detail how to generate an example
-plugin that works with Croogo4.
+## Bake the Schema
 
-From command line, bake the initial plugin using the following commands:
+We start by creating the plugin skeleton and the books and authors tables.
 
-**_Make sure you select no 'n' to not overwrite the existing composer.json file When execuring the commands below._**
+- First, we bake the plugin:
+  ```sh
+  bin/cake bake plugin --theme Croogo/Core Books
+  ```
+  **_Make sure to select no ['n'] when asked to overwrite the existing composer.json file._**
 
-```sh
-bin/cake bake plugin Books
-bin/cake migrations create --plugin Books InitialMigration
-```
+  Bake automatically activated our new plugin in the src/Application.php file, but this overrides Croogo's ability to enable and disable the plugin, so we'll need to reverse this by running the following command:
+  ```sh
+  bin/cake plugin unload Books
+  ```
+- Then, we activate it manually in Croogo's admin interface:
+  - We load our app's `/admin` panel, and see the default Dashboard for our new plugin.
+  - Then navigate to Extensions -> Plugins and find our new plugin in the list.
+  - Activate the plugin by clicking on the lightning bolt.
+- Next, we create a blank initial migration, and edit the change() method:
+  ```sh
+  bin/cake migrations create --plugin Books BooksInitialMigration
+  ```
+  `plugins/Books/config/Migrations/` 
+  ```php
+  public function change()
+  {
+      $this->table('authors')
+          ->addColumn('name', 'string')
+          ->create();
 
-Edit the migration file generated in `plugins/Books/config/Migrations/` and replace the change() method with:
+      $this->table('books')
+          ->addColumn('title', 'string')
+          ->addColumn('author_id', 'integer')
+          ->addForeignKey('author_id', 'authors', ['id'], [
+              'constraint' => 'fk_books2authors',
+              'delete' => 'RESTRICT',
+          ])
+          ->create();
+  }
+  ```
+- Then we load the database and generate our models, being sure to specify the Croogo theme:
+  ```sh
+  bin/cake migrations migrate --plugin Books
+  bin/cake bake model --plugin Books --theme Croogo/Core Authors
+  bin/cake bake model --plugin Books --theme Croogo/Core Books
+  ```
 
-```php
-    public function change()
+## Configure the Croogo Admin Interface
+
+We always need to perform full CRUD as an administrator, so to get testing in on all the features, it's best to start with the backend.
+
+- By specifying the theme and the prefix, we bake the controllers and templates we need.
+
+  ```sh
+  bin/cake bake controller --plugin Books --prefix Admin --theme Croogo/Core Authors
+  bin/cake bake controller --plugin Books --prefix Admin --theme Croogo/Core Books
+  bin/cake bake template --plugin Books --prefix Admin --theme Croogo/Core Authors
+  bin/cake bake template --plugin Books --prefix Admin --theme Croogo/Core Books
+  ```
+- Now, browse to `/admin/books/books` and `/admin/books/authors` and confirm the following:
+  - it uses the Croogo/Core admin theme,
+  - the index is displayed by default,
+  - add, edit, view and delete operate as expected.
+
+- In case the author's name does not appear in any or just some of the book views (index, view, add or edit), we need to check a couple of things:
+  - If the model baking got confused about what the displayField should be, it will default to 'id'. So if we were seeing the author's id instead of their name when looking at a book record, we would need to ensure the displayField was set correctly in the Authors Table as shown below. A similar check should be made in the BooksTable.php file as well.
+
+    `plugins/Books/src/Model/Table/AuthorsTable.php`
+    ```php
+    $this->setTable('authors');
+    $this->setDisplayField('name');
+    $this->setPrimaryKey('id');
+    ```
+  - Croogo uses the FriendsOfCake/Crud plugin to simplify much of the standard controller crud functions. Many of the actions are mapped to custom Croogo admin actions, however the view action is not, and the standard Crud View action is used. There, the query performs a find('all') method, but does not contain() any other tables by default. Therefore, the author record is not included. To correct this, we can listen to the beforeFind event from the Crud component and add the contain() as shown below:
+
+    `plugins/Books/src/Controller/Admin/BooksController.php`
+    ```php
+    public function view($id = null)
     {
-        $this->table('authors')
-            ->addColumn('name', 'string')
-            ->create();
-
-        $this->table('books')
-            ->addColumn('title', 'string')
-            ->addColumn('author_id', 'integer')
-            ->addForeignKey('author_id', 'authors', ['id'], [
-                'constraint' => 'fk_books2authors',
-                'delete' => 'RESTRICT',
-            ])
-            ->create();
-    }
-```
-
-Proceed with the bake commands as follows:
-
-```sh
-bin/cake migrations migrate --plugin Books
-
-bin/cake bake model --plugin Books Authors
-bin/cake bake model --plugin Books Books
-
-bin/cake bake controller --plugin Books Authors
-bin/cake bake controller --plugin Books Books
-
-bin/cake bake template --plugin Books Authors
-bin/cake bake template --plugin Books Books
-```
-
-## Configure for use in Croogo
-
-Configure the plugin so Croogo can recognize it:
-
-- Prepare a plugin.json file so that Extension plugin can recognize it Edit `plugin/Books/config/plugin.json`, and put the following:
-
-```json
-{
-  "name" : "Books",
-  "description" : "Croogo Books Example Plugin."
-}
-```
-
-- Edit `src/Application.php`, in bootstrap() method and remove `$this->addPlugin('Books');`
-- Browse to /admin panel, Extensions -> Plugins -> Activate Books plugin
-- Browse to **/books/books** and **/books/authors** and see it uses CakePHP default app theme
-- you may need to use the command `bin/cake cache clear_all` to clear the cache
-- To make the plugin use Croogo current theme, edit the plugins AppController file, eg: `plugins/Books/src/Controller/AppController.php`
-
-Change the parent class from:
-
-`use App\Controller\AppController as BaseController;`
-
-to:
-
-`use Croogo\Core\Controller\AppController as BaseController;`
-
-- In order to view the authors when adding or editing a book, you will need to add the following to the add and edit fucntions in the Books controller:
-
-`plugins/Books/src/Controller/BooksController.php`
-
-Update the add function
-
-```php
-public function add()
-    {
-        $book = $this->Books->newEntity();
-        $authors = $this->Books->Authors->find('list'); // Add this line
-        if ($this->request->is('post')) {
-            $book = $this->Books->patchEntity($book, $this->request->getData());
-            if ($this->Books->save($book)) {
-                $this->Flash->success(__('The book has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The book could not be saved. Please, try again.'));
-        }
-        $this->set(compact('book', 'authors')); // and add this
-    }
-```
-Update the edit function
-
-```php
-public function edit($id = null)
-    {
-        $book = $this->Books->get($id, [
-            'contain' => []
-        ]);
-        $authors = $this->Books->Authors->find('list'); // Add this line
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $book = $this->Books->patchEntity($book, $this->request->getData());
-            if ($this->Books->save($book)) {
-                $this->Flash->success(__('The book has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The book could not be saved. Please, try again.'));
-        }
-        $this->set(compact('book', 'authors')); // and add this
-    }
-```
-
-## Admin Integration
-
-To prepare the plugin for use in Croogo Admin follow the next steps:
-
-- Use the following AppController.php below as template and put it in:
-
-`plugin/Books/src/Controller/Admin/AppController.php`
-
-```php
-<?php
-
-namespace Books\Controller\Admin;
-
-use Croogo\Core\Controller\Admin\AppController as BaseController;
-
-class AppController extends BaseController
-{
-
-}
-```
-
-- Next you will probably need to patch the following file
-
-`vendor/croogo/croogo/Core/src/Template/Bake/Controller/controller.ctp`
-
-With the following
-
-```php
-<?php
-
-namespace <%= $namespace %>\Controller<%= $prefix %>;
-
-<% if (class_exists("$namespace\Controller\$prefix\AppController")): %>
-use <%= $namespace %>\Controller<%= $prefix %>AppController as CroogoController;
-<% else: %>
-use Croogo\Core\Controller<%= $prefix %>\AppController as CroogoController;
-<% endif; %>
-
-/**
- * <%= $name %> Controller
- *
- * @property \<%= $namespace %>\Model\Table\<%= $defaultModel %>Table $<%= $defaultModel %>
-<%
-foreach ($components as $component):
-    $classInfo = $this->Bake->classInfo($component, 'Controller/Component', 'Component');
-%>
- * @property <%= $classInfo['fqn'] %> $<%= $classInfo['name'] %>
-<% endforeach; %>
- */
-class <%= $name %>Controller extends CroogoController
-{
-<%
-echo $this->Bake->arrayProperty('helpers', $helpers, ['indent' => false]);
-echo $this->Bake->arrayProperty('components', $components, ['indent' => false]);
-foreach($actions as $action) {
-    echo $this->element('Controller/' . $action);
-}
-%>
-
-}
-```
-
-- Once that's done execute the following commands:
-
-```sh
-
-bin/cake bake controller --plugin Books --prefix Admin --theme Croogo/Core Authors
-bin/cake bake controller --plugin Books --prefix Admin --theme Croogo/Core Books
-bin/cake bake template --plugin Books --prefix Admin --theme Croogo/Core Authors
-bin/cake bake template --plugin Books --prefix Admin --theme Croogo/Core Books
-
-```
-
-- To utilise admin routes, you will need to **ADD** the following code to the file:
-
-`plugins/Books/config/routes.php`
-
-```php
-Router::plugin('Books', ['path' => '/'], function (RouteBuilder $route) {
-    $route->prefix('admin', function (RouteBuilder $route) {
-        $route->scope('/books', [], function (RouteBuilder $route) {
-            $route->fallbacks();
+        $this->Crud->on('beforeFind', function(\Cake\Event\Event $event) {
+            $event->getSubject()->query->contain(['Authors']);
         });
-    });
-});
-```
-- Add the next bit of code to the following files:
-
-`$this->addBehavior('Search.Search');`
-
-`plugins/Books/src/Model/Table/AuthorsTable.php`
-
-```php
-public function initialize(array $config)
-    {
-        parent::initialize($config);
-
-        $this->addBehavior('Search.Search');  // this line
-        $this->setTable('authors');
-        $this->setDisplayField('name');
-        $this->setPrimaryKey('id');
-
-        $this->hasMany('Books', [
-            'foreignKey' => 'author_id',
-            'className' => 'Books.Books'
-        ]);
+        return $this->Crud->execute();
     }
-```
-And this
+    ```
+## Configure the Croogo Frontend
 
- `plugins/Books/src/Model/Table/BooksTable.php`
+Now that we know the backend works, the frontend is easy.
 
-```php
-public function initialize(array $config)
-    {
-        parent::initialize($config);
+- We bake again, this time leaving off the `--prefix` and `--theme` options. The standard Cake theme is used here to keep things simple.
 
-        $this->addBehavior('Search.Search');  // this line
-        $this->setTable('books');
-        $this->setDisplayField('title');
-        $this->setPrimaryKey('id');
+  **_One significant difference between using the Cake theme and the Croogo theme is the Crud component. If you find your frontend needs the capabilities of Crud, then go for it, but that is beyond the scope of this guide._**
+  ```sh
+  bin/cake bake controller --plugin Books Authors
+  bin/cake bake controller --plugin Books Books
+  bin/cake bake template --plugin Books Authors
+  bin/cake bake template --plugin Books Books
+  ```
+  Let's clear the cache
+  ```sh
+  bin/cake cache clear_all
+  ```
 
-        $this->belongsTo('Authors', [
-            'foreignKey' => 'author_id',
-            'joinType' => 'INNER',
-            'className' => 'Books.Authors'
-        ]);
-    }
-```
-To access the admin URLs use
-`/admin/books/books` and `/admin/books/authors`
+- Browse to `/books/books` and `/books/authors` and see each uses the Croogo app theme.
+  - Note that the styling and alignment of the buttons and data rows are not as desired, so we would need to account for that in our plugin's styling which is beyond the scope of this guide.
+  - Also note that even though we didn't specify the Croogo/Core theme when baking the controllers, the Croogo view theme gets set in the Croogo controller extended by our plugin's AppController.
+
+    `plugins/Books/src/Controller/AppController.php`
+    ```php
+    use Croogo\Core\Controller\AppController as CroogoController;
+
+    class AppController extends CroogoController
+    ```
+
+- **_Your plugin should now be working in both public/frontend and in admin/backend._**
 
 ## Sidebar
 
-To add the admin URLs to the sidebar navigation in Croogo4 Admin
-- Create the following file:
-`plugins/Books/config/admin_menu.php`
+Customize the sidebar navigation in the Croogo4 Admin UI to more easily get to our Book and Author indexes.
 
-and add the following code:
+- We customize the menu in the generated config file by copying the default 'child' entry and modifying them for our Books and Authors controllers:
 
-```php
-<?php
+  `plugins/Books/config/admin_menu.php`
+  ```php
+  ...
 
-namespace Croogo\Nodes\Config;
+  Nav::add('sidebar', 'books', [
 
-use Croogo\Core\Nav;
+  ...
 
-Nav::add('sidebar', 'books', [
-    'icon' => 'edit',
-    'title' => __d('croogo', 'Books'),
-    'url' => [
-        'prefix' => 'admin',
-        'plugin' => 'Books',
-        'controller' => 'Books',
-        'action' => 'index',
-    ],
-    'weight' => 10,
-    'children' => [
-        'list' => [
-            'title' => __d('croogo', 'Books'),
-            'url' => [
-                'prefix' => 'admin',
-                'plugin' => 'Books',
-                'controller' => 'Books',
-                'action' => 'index',
-            ],
-            'weight' => 10,
-        ],
-        'create' => [
-            'title' => __d('croogo', 'Authors'),
-            'url' => [
-                'prefix' => 'admin',
-                'plugin' => 'Books',
-                'controller' => 'Authors',
-                'action' => 'index',
-            ],
-            'weight' => 20,
-        ],
-    ]
-]);
+      'children' => [
+          'books' => [
+              'title' => __d('croogo', 'Books'),
+              'url' => [
+                  'prefix' => 'admin',
+                  'plugin' => 'Books',
+                  'controller' => 'Books',
+                  'action' => 'index',
+              ],
+              'weight' => 10,
+          ],
+          'authors' => [
+              'title' => __d('croogo', 'Authors'),
+              'url' => [
+                  'prefix' => 'admin',
+                  'plugin' => 'Books',
+                  'controller' => 'Authors',
+                  'action' => 'index',
+              ],
+              'weight' => 20,
+          ],
+      ]
+  ]);
+  ```
 
-```
+- Again, we clear the cache:
 
-Again, you will need to clear the cache either via the admin area of using the following command: `bin/cake cache clear_all`
+  `bin/cake cache clear_all`
 
-**Your plugin should now be working in both public/frontend and in admin/backend.**
+## Other Notes
+- References to Croogo Models
+  - If your plugin contains references to models outside of it's namespace (like the Croogo Users table for example), the standard baked Table files will need to be modified manually.
+Here is an example of a Jobs plugin with Jobs that get claimed by Croogo Users. When baked, it looks like this:
+    ```php
+    $this->belongsTo('Users', [
+        'foreignKey' => 'claimed_by_id',
+        'className' => 'Jobs.Users',
+    ]);
+    ```
+  - But the Jobs plugin does not contain a Users model. Instead, it should be changed to look like this:
+    ```php
+    $this->belongsTo('Users', [
+        'foreignKey' => 'claimed_by_id',
+        'className' => 'Croogo/Users.Users',
+    ]);
+    ```
+- Croogo Dashboards
+  - The Croogo plugin bake theme includes a simple Croogo dashboard ready for customization. They use Cake cells, so if you are familiar with those, dashboards will be simple.
